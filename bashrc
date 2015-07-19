@@ -28,3 +28,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Load aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+eval `dircolors ~/.dircolors`
