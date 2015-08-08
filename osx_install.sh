@@ -30,6 +30,8 @@ brew cask install slack
 brew cask install karabiner
 brew cask install deluge
 brew cask install radiant-player
+#require for radiant-player
+brew cask install flash
 #lags a lot when downloading 
 #brew cask install dash
 
