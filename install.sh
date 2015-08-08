@@ -1,3 +1,4 @@
+#!/bin/bash
 ln -sf ~/.dotfiles/aliases ~/.aliases
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
 ln -sf ~/.dotfiles/gemrc ~/.gemrc
@@ -13,4 +14,3 @@ ln -sf ~/.dotfiles/rspec ~/.rspec
 ln -sf ~/.dotfiles/rubocop.yml ~/.rubocop.yml
 ln -sf ~/.dotfiles/sqliterc ~/.sqliterc
 ln -sf ~/.dotfiles/vimrc ~/.vimrc
-ln -sf ~/.dotfiles/shortcuts.png ~/Pictures/shortcuts.png

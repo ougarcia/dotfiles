@@ -15,6 +15,7 @@ source ~/.dotfiles/git-completion.bash
 PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+#for postgresql
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 PATH="$PATH:$HOME/.bin"
 
@@ -28,5 +29,3 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Load aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
-
-eval `dircolors ~/.dircolors`
