@@ -15,6 +15,7 @@ brew install rbenv
 brew install rbenv-gem-rehash
 brew install ruby-build
 brew install vim
+brew install tmux
 
 #install gui tools
 brew cask install google-chrome
