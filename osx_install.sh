@@ -34,6 +34,7 @@ brew cask install slack
 #   -maybe there's a simple script for the ctrl -> esc mapping
 brew cask install karabiner
 brew cask install deluge
+brew cask install calibre
 brew cask install radiant-player
 #require for radiant-player
 brew cask install flash
