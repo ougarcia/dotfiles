@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
+Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -26,7 +27,7 @@ filetype plugin indent on    " required
 syntax on
 
 set background=dark
-colorscheme molokai
+colorscheme base16-default
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2                    "set default indenting to 2 spaces

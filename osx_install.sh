@@ -23,16 +23,21 @@ brew cask install atom
 brew cask install postgres
 brew cask install flux
 brew cask install vlc
+#TODO: find a way to load my settings (colorscheme, open in previous dir)
 brew cask install iterm2
 brew cask install evernote
 brew cask install todoist
 brew cask install slack
+#Key repeat have ctrl send escape if pressed by itself
+#TODO: see if there's a better way to do this
+#   -there's a cl command to set key_repeat
+#   -maybe there's a simple script for the ctrl -> esc mapping
 brew cask install karabiner
 brew cask install deluge
 brew cask install radiant-player
 #require for radiant-player
 brew cask install flash
-#lags a lot when downloading 
+#lags a lot when downloading
 #brew cask install dash
 
 
