@@ -14,3 +14,4 @@ ln -sf ~/.dotfiles/rspec ~/.rspec
 ln -sf ~/.dotfiles/rubocop.yml ~/.rubocop.yml
 ln -sf ~/.dotfiles/sqliterc ~/.sqliterc
 ln -sf ~/.dotfiles/vimrc ~/.vimrc
+ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
