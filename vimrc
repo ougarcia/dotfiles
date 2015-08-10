@@ -35,6 +35,8 @@ set expandtab
 set noimdisable
 set iminsert=0
 set imsearch=0
+set nobackup
+set nowritebackup
 set noswapfile
 set relativenumber                  "set relative numberlines
 set number                          "show the line number of the one i'm on
@@ -43,8 +45,31 @@ set colorcolumn=81                  "show the 80 char rule
 set laststatus=2
 set ignorecase                      "Use case insensitive search
 set smartcase                       "except when using capital letters
+set ruler                           " show the cursor position all the time
+set showcmd                         " display incomplete commands
+set incsearch
 
-" copy visualy selected text to clip board
+"map space to leader
+let mapleader = " "
+"map frequent actions to leader
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x :x<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <leader><leader> <c-^>
+nnoremap <Leader>g :vertical resize 85<CR>
+nnoremap <Leader>r :source ~/.vimrc<CR>
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" copy visualy selected text to clipboard
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 
