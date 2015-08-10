@@ -41,15 +41,12 @@ set number                          "show the line number of the one i'm on
 set textwidth=72
 set colorcolumn=81                  "show the 80 char rule
 set laststatus=2
-
-" catch common save and quit mistakes
-command WQ wq                       "meant wq
-command Wq wq                       "meant wq
-command W w                         "meant w
-command Q q                         "meant q
+set ignorecase                      "Use case insensitive search
+set smartcase                       "except when using capital letters
 
 " copy visualy selected text to clip board
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 
+"toggle nerdreee
 map <C-n> :NERDTreeToggle<CR>
