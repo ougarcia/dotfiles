@@ -27,7 +27,7 @@ filetype plugin indent on    " required
 syntax on
 
 set background=dark
-colorscheme base16-default
+colorscheme solarized
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2                    "set default indenting to 2 spaces
