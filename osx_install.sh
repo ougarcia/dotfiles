@@ -57,9 +57,14 @@ npm install -g jshint
 #install dotfiles
 bash ~/.dotfiles/dotfiles_install.sh
 
-#setup  Vundler for vim
+#setup pluings for vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+#install plugins for tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf
+~/.tmux/plugins/tpm/bin/install_plugins
 
 #install important gems
 gem update --system
