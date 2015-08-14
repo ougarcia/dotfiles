@@ -68,7 +68,7 @@ tmux source ~/.tmux.conf
 
 #install important gems
 gem update --system
-gem install bundler rails
+gem install bundler rails rubocop
 #want to install source code pro font
 #there's a brew cask that has fonts, or I can manually download it and put it in
 # ~/Library/Fonts
