@@ -51,6 +51,9 @@ set incsearch
 set ruler
 set showcmd
 set laststatus=2
+" Exit insert mode instantaneously at the cost of no escape sequences
+"set noesckeys
+set ttimeoutlen=5
 
 "map space to leader
 let mapleader = " "
