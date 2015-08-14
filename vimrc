@@ -90,3 +90,4 @@ nmap <CR> O<Esc>j
 "annoying errors in erb
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
+let g:airline_powerline_fonts = 1
