@@ -55,6 +55,8 @@ rbenv global 2.2.2
 brew install node
 npm install -g jshint
 
+#install oh-my-zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 #install dotfiles
 bash ~/.dotfiles/dotfiles_install.sh
 
