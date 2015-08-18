@@ -4,3 +4,4 @@ alias l='ls'
 alias ls="ls -G"
 alias v="vim"
 alias t="tmux"
+alias gs="git status"

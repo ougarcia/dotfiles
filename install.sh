@@ -1,6 +1,7 @@
 #!/bin/bash
 ln -sf ~/.dotfiles/aliases ~/.aliases
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
+ln -sf ~/.dotfiles/zshrc ~/.zshrc
 ln -sf ~/.dotfiles/gemrc ~/.gemrc
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/gitignore ~/.gitignore
