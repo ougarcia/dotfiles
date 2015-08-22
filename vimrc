@@ -68,6 +68,7 @@ nnoremap <leader><leader> <c-^>
 nnoremap <Leader>g :vertical resize 85<CR>
 nnoremap <Leader>r :redraw!<CR>
 nnoremap <Leader>R :source ~/.vimrc<CR>
+nnoremap <Leader>C :SyntasticCheck eslint<CR>
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -88,6 +89,12 @@ map <C-n> :NERDTreeToggle<CR>
 
 " insert lines without entering insert mode
 nmap <CR> O<Esc>j
+
+" pick linter for js
+let g:syntastic_javascript_checkers = ['jshint']
+"run linter on opening file
+let g:syntastic_check_on_open = 1
+
 
 "annoying errors in erb
 let g:syntastic_eruby_ruby_quiet_messages =
