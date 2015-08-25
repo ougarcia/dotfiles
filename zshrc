@@ -101,3 +101,4 @@ source $ZSH/oh-my-zsh.sh
 alias ..="cd .."
 alias v="vim"
 alias t="tmux"
+alias ta="tmux a -t"
