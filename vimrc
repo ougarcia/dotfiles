@@ -66,6 +66,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
 nnoremap <leader><leader> <c-^>
 nnoremap <Leader>g :vertical resize 85<CR>
+nnoremap <Leader>G :vertical resize 88<CR>
 nnoremap <Leader>r :redraw!<CR>
 nnoremap <Leader>R :source ~/.vimrc<CR>
 nnoremap <Leader>C :SyntasticCheck eslint<CR>
