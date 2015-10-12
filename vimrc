@@ -15,9 +15,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'briancollins/vim-jst'
 Plugin 'jszakmeister/vim-togglecursor'
+Plugin 'sheerun/vim-polyglot'
 
 
 " All Plugins must be added before the following line
