@@ -1106,11 +1106,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>349 190 701 319 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>356 265 924 485 0 0 1280 777 </string>
+	<string>356 286 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>302 181 650 451 0 0 1280 777 </string>
+	<string>452 206 650 476 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>268 206 650 501 0 0 1280 777 </string>
+	<string>366 79 650 476 0 0 1280 800 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2569,7 +2569,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>460690904.39677799</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>461120614.00881201</real>
+	<real>465759537.48877001</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2628,11 +2628,11 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-08-13T17:47:32Z</date>
+	<date>2015-10-05T17:38:20Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2663,13 +2663,21 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
+	<key>WebKitDefaultFontSize</key>
+	<integer>11</integer>
+	<key>WebKitStandardFont</key>
+	<string>.Helvetica Neue DeskInterface</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.1</string>
+	<string>2.1.4</string>
 </dict>
 </plist>
