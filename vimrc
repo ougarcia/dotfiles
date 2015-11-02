@@ -17,6 +17,8 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'jszakmeister/vim-togglecursor'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-rails'
 
 
 " All Plugins must be added before the following line
@@ -90,8 +92,11 @@ map <C-n> :NERDTreeToggle<CR>
 " insert lines without entering insert mode
 nmap <CR> O<Esc>j
 
-" pick linter for js
+" specify linters
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_haml_checkers = ['haml_lint']
+" most rubocop messages are warning, I don't want to ignore those
+let g:syntastic_ruby_rubocop_quiet_messages = { "level": [] }
 "run linter on opening file
 let g:syntastic_check_on_open = 1
 

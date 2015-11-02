@@ -17,6 +17,7 @@ brew install ruby-build
 brew install vim
 brew install tmux
 brew install zsh
+brew install the_silver_searcher
 
 #install gui tools
 brew cask install google-chrome
