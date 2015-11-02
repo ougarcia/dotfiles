@@ -18,3 +18,5 @@ ln -sf ~/.dotfiles/vimrc ~/.vimrc
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/tmux_theme.conf ~/.tmux_theme.conf
 ln -sf ~/.dotfiles/eslintrc ~/.eslintrc
+ln -sf ~/.dotfiles/agignore ~/.agignore
+
