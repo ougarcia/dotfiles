@@ -1106,9 +1106,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>349 190 701 319 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>356 286 924 485 0 0 1280 800 </string>
+	<string>356 288 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>195 223 650 476 0 0 1280 777 </string>
+	<string>196 225 650 476 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>366 79 650 476 0 0 1280 800 </string>
 	<key>New Bookmarks</key>
@@ -1664,7 +1664,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>SourceCodePro-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2569,7 +2569,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>460690904.39677799</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>468351135.52239102</real>
+	<real>469041014.166704</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2632,7 +2632,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-11-04T17:31:19Z</date>
+	<date>2015-11-13T21:58:47Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

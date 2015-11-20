@@ -19,6 +19,7 @@ Plugin 'jszakmeister/vim-togglecursor'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-rails'
+Plugin 'ngmy/vim-rubocop'
 
 
 " All Plugins must be added before the following line
@@ -95,8 +96,9 @@ nmap <CR> O<Esc>j
 " specify linters
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_haml_checkers = ['haml_lint']
-" most rubocop messages are warning, I don't want to ignore those
-let g:syntastic_ruby_rubocop_quiet_messages = { "level": [] }
+" Stupid warning message in rubocop. Have to take time to fix this soon.
+"let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:syntastic_ruby_checkers = ['mri']
 "run linter on opening file
 let g:syntastic_check_on_open = 1
 
