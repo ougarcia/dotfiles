@@ -1,11 +1,10 @@
 #!/bin/bash
 #use the following line to install xcode
 #xcode-select --install
-#it takes a while, run the command and wait for it to download, then run the script
 
 #install homebrew and homebrew cask
-#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew install caskroom/cask/brew-cask
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install caskroom/cask/brew-cask
 
 #install cli tools
 brew install git
@@ -18,6 +17,7 @@ brew install vim
 brew install tmux
 brew install zsh
 brew install the_silver_searcher
+brew install tree
 
 #install gui tools
 brew cask install google-chrome
@@ -26,29 +26,19 @@ brew cask install atom
 brew cask install postgres
 brew cask install flux
 brew cask install vlc
-#TODO: find a way to load my settings (colorscheme, open in previous dir)
 brew cask install iterm2
 brew cask install evernote
 brew cask install todoist
 brew cask install slack
-#Key repeat have ctrl send escape if pressed by itself
-#TODO: see if there's a better way to do this
-#   -there's a cl command to set key_repeat
-#   -maybe there's a simple script for the ctrl -> esc mapping
 brew cask install karabiner
 brew cask install deluge
 brew cask install calibre
-brew cask install radiant-player
-#require for radiant-player
-brew cask install flash
-#lags a lot when downloading
-#brew cask install dash
 
 
 #get ruby up and running
 #might eventually want to add the —verbose flag, usually takes a while.
-rbenv install 2.2.2
-rbenv global 2.2.2
+rbenv install 2.2.1
+rbenv global 2.2.1
 
 
 #install node and jshint
@@ -73,6 +63,6 @@ tmux source ~/.tmux.conf
 #install important gems
 gem update --system
 gem install bundler rails rubocop
-#want to install source code pro font
-#there's a brew cask that has fonts, or I can manually download it and put it in
-# ~/Library/Fonts
+
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
