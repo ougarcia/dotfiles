@@ -41,17 +41,17 @@ rbenv install 2.2.1
 rbenv global 2.2.1
 
 
-#install node and jshint
-#eventually I’ll want to use nvm
+#install node and jshint. Eventually I’ll want to use nvm
 brew install node
 npm install -g jshint
 
 #install oh-my-zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
 #install dotfiles
 bash ~/.dotfiles/dotfiles_install.sh
 
-#setup pluings for vim
+#setup plugins for vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
@@ -64,5 +64,9 @@ tmux source ~/.tmux.conf
 gem update --system
 gem install bundler rails rubocop
 
+# Install fonts
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
+
+#TODO: Have this script automatically install the `pure` zsh theme
+# http://github.com/sindresorhus/pure
