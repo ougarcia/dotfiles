@@ -35,4 +35,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 
 alias v="vim"
+alias t="tmux"
 alias ta="tmux a -t"

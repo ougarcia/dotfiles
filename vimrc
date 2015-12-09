@@ -20,6 +20,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'tpope/vim-fugitive'
 
 
 " All Plugins must be added before the following line
