@@ -27,7 +27,7 @@
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
-	<true/>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Solarized Dark</key>
@@ -1093,9 +1093,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>515 562 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>2521 216 924 485 1440 -540 2560 1417 </string>
+	<string>2521 216 924 485 1440 -540 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>217 426 650 451 0 0 1440 877 </string>
+	<string>683 426 650 451 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2552,7 +2552,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>469752865.394324</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>469993388.58337301</real>
+	<real>471652793.43644398</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2615,7 +2615,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-11-24T21:38:39Z</date>
+	<date>2015-12-10T09:30:54Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

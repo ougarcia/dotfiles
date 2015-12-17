@@ -18,6 +18,7 @@ brew install tmux
 brew install zsh
 brew install the_silver_searcher
 brew install tree
+brew install reattach-to-user-namespace
 
 #install gui tools
 brew cask install google-chrome

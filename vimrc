@@ -58,6 +58,9 @@ set laststatus=2
 "set noesckeys
 set ttimeoutlen=5
 
+" For OSX, vim, & tmux clipboard integration
+set clipboard=unnamed
+
 "map space to leader
 let mapleader = " "
 "map frequent actions to leader
