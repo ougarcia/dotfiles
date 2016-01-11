@@ -1,12 +1,11 @@
 #!/bin/bash
+
 #use the following line to install xcode
 #xcode-select --install
 
-#install homebrew and homebrew cask
+#install homebrew & command line tools
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install caskroom/cask/brew-cask
 
-#install cli tools
 brew install git
 brew install heroku-toolbelt
 brew install postgres
@@ -20,7 +19,9 @@ brew install the_silver_searcher
 brew install tree
 brew install reattach-to-user-namespace
 
-#install gui tools
+#install brew-cask & gui tools
+brew tap caskroom/cask
+
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install atom
