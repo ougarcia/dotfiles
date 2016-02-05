@@ -73,9 +73,18 @@ nnoremap <Leader>Q :qa<CR>
 nnoremap <leader><leader> <c-^>
 nnoremap <Leader>g :vertical resize 85<CR>
 nnoremap <Leader>G :vertical resize 88<CR>
-nnoremap <Leader>r :redraw!<CR>
-nnoremap <Leader>R :source ~/.vimrc<CR>
-nnoremap <Leader>C :SyntasticCheck eslint<CR>
+nnoremap <Leader>rd :redraw!<CR>
+nnoremap <Leader>rc :source ~/.vimrc<CR>
+nnoremap <Leader>ES :SyntasticCheck eslint<CR>
+
+" Shortcuts for Vim-fugitive
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>ge :Gdiff<CR>
+nnoremap <Leader>dg :diffget<CR>
+nnoremap <Leader>dp :diffput<CR>
+
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -87,9 +96,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" copy visualy selected text to clipboard
-vmap <C-x> :!pbcopy<CR>
-vmap <C-c> :w !pbcopy<CR><CR>
 
 "toggle nerdreee
 map <C-n> :NERDTreeToggle<CR>
