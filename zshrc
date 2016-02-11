@@ -56,3 +56,10 @@ alias migrate-stag='heroku run rake db:migrate --remote staging'
 alias migrate-status='rake db:migrate:status'
 alias releases-prod='heroku releases --remote production'
 alias releases-stag='heroku releases --remote staging'
+
+
+copy-db-prod() {
+  heroku pg:backups capture --remote production;
+  curl -o /tmp/latest.dump `heroku pg:backups public-url --remote production`
+  pg_restore --verbose --clean --no-acl --no-owner -h localhost -U oscar -d f50_development /tmp/latest.dump
+}
