@@ -12,7 +12,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'jszakmeister/vim-togglecursor'
@@ -117,3 +117,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
 let g:airline_powerline_fonts = 1
+
+" Use ag in CtrlP for listing files.
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
