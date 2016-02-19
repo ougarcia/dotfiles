@@ -120,3 +120,6 @@ let g:airline_powerline_fonts = 1
 
 " Use ag in CtrlP for listing files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
