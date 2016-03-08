@@ -18,6 +18,7 @@ brew install zsh
 brew install the_silver_searcher
 brew install tree
 brew install reattach-to-user-namespace
+brew install phantomjs
 
 #install brew-cask & gui tools
 brew tap caskroom/cask
@@ -39,8 +40,8 @@ brew cask install calibre
 
 #get ruby up and running
 #might eventually want to add the —verbose flag, usually takes a while.
-rbenv install 2.2.1
-rbenv global 2.2.1
+rbenv install 2.2.4
+rbenv global 2.2.4
 
 
 #install node and jshint. Eventually I’ll want to use nvm
