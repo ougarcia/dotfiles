@@ -38,6 +38,6 @@
   "strict": false,
   "sub": true,
   "undef": true,
-  "esnext": true
+  "multistr": true
 }
 
