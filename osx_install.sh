@@ -51,6 +51,8 @@ npm install -g jshint
 #install oh-my-zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
+
+
 #install dotfiles
 bash ~/.dotfiles/dotfiles_install.sh
 
@@ -71,5 +73,11 @@ gem install bundler rails rubocop
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
-#TODO: Have this script automatically install the `pure` zsh theme
-# http://github.com/sindresorhus/pure
+# Install the `pure` zsh theme
+rm ~/.oh-my-zsh/themes/pure.zsh-theme
+git clone https://github.com/sindresorhus/pure.git
+cp pure/pure.zsh ~/.oh-my-zsh/custom/pure.zsh-theme
+cp pure/async.zsh ~/.oh-my-zsh/custom/async.zsh
+
+rm -rf pure/
+
