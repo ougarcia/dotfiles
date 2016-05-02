@@ -17,6 +17,9 @@ PATH="$HOME/.rbenv/bin:$PATH"
 # shouldn't need to zsh argument, but w/e
 eval "$(rbenv init - zsh)"
 
+# enable shims for pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 # for postgresql
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 PATH="$PATH:$HOME/.bin"
