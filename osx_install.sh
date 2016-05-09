@@ -34,8 +34,6 @@ brew cask install evernote
 brew cask install todoist
 brew cask install slack
 brew cask install karabiner
-brew cask install deluge
-brew cask install calibre
 
 
 #get ruby up and running
