@@ -4,6 +4,7 @@
   "debug": true,
   "eqeqeq": true,
   "eqnull": true,
+  "esnext": true,
   "expr": true,
   "globalstrict": true,
   "predef": [
