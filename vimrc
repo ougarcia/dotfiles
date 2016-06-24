@@ -22,6 +22,8 @@ Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-fugitive'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 
 
 " All Plugins must be added before the following line
@@ -37,6 +39,9 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+autocmd Filetype javascript setlocal sw=4
+
 " because git
 set nobackup
 set nowritebackup
@@ -100,6 +105,7 @@ nnoremap <C-l> <C-w>l
 
 "toggle nerdreee
 map <C-n> :NERDTreeToggle<CR>
+map <Leader>nf :NERDTreeFind<CR>
 
 " insert lines without entering insert mode
 nmap <CR> O<Esc>j
@@ -113,6 +119,7 @@ let g:syntastic_ruby_checkers = ['mri']
 "run linter on opening file
 let g:syntastic_check_on_open = 1
 
+let g:syntastic_python_checkers = ['pep8']
 
 "annoying errors in erb
 let g:syntastic_eruby_ruby_quiet_messages =
@@ -124,3 +131,10 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
+
+set mouse=a
+
+let NERDTreeIgnore = ['\.pyc$']
+
+let g:syntastic_javascript_checkers = ['jshint']
+
