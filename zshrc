@@ -41,28 +41,4 @@ alias v="vim"
 alias t="tmux"
 alias ta="tmux a -t"
 
-alias console-prod='heroku run rails console --remote production'
-alias console-stag='heroku run rails console --remote staging'
-alias cu='rake cucumber'
-alias deploy-migrate-prod='git push production master:master; heroku run rake db:migrate --remote production'
-alias deploy-migrate-stag='git push staging master:master; heroku run rake db:migrate --remote staging'
-
-alias deploy-prod='git push production master:master'
-alias deploy-stag='git push staging master:master'
-
-alias log-prod='heroku logs --tail --remote production'
-alias log-stag='heroku logs --tail --remote staging'
-alias migrate='rake db:migrate'
-
-alias migrate-prod='heroku run rake db:migrate --remote production'
-alias migrate-stag='heroku run rake db:migrate --remote staging'
-alias migrate-status='rake db:migrate:status'
-alias releases-prod='heroku releases --remote production'
-alias releases-stag='heroku releases --remote staging'
-
-
-copy-db-prod() {
-  heroku pg:backups capture --remote production;
-  curl -o /tmp/latest.dump `heroku pg:backups public-url --remote production`
-  pg_restore --verbose --clean --no-acl --no-owner -h localhost -U oscar -d f50_development /tmp/latest.dump
-}
+alias gll='git log --oneline'
