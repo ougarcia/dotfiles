@@ -34,6 +34,7 @@ brew cask install evernote
 brew cask install todoist
 brew cask install slack
 brew cask install karabiner
+brew cask install postman
 
 
 #get ruby up and running
