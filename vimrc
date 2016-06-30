@@ -24,6 +24,7 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-fugitive'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+Plugin 'majutsushi/tagbar'
 
 
 " All Plugins must be added before the following line
@@ -82,6 +83,7 @@ nnoremap <Leader>G :vertical resize 88<CR>
 nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>rc :source ~/.vimrc<CR>
 nnoremap <Leader>ES :SyntasticCheck eslint<CR>
+nnoremap <Leader>t :TagbarToggle<CR>
 
 " Shortcuts for Vim-fugitive
 nnoremap <Leader>gs :Gstatus<CR>
@@ -137,4 +139,6 @@ set mouse=a
 let NERDTreeIgnore = ['\.pyc$']
 
 let g:syntastic_javascript_checkers = ['jshint']
+
+
 
