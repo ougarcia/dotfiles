@@ -4,3 +4,5 @@
 *.db
 node_modules
 a.out
+
+tags
