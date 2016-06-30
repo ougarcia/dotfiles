@@ -70,6 +70,10 @@ set clipboard=unnamed
 
 "map space to leader
 let mapleader = " "
+
+" Should be default
+nnoremap Y y$
+
 "map frequent actions to leader
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>W :wa<CR>
@@ -139,6 +143,3 @@ set mouse=a
 let NERDTreeIgnore = ['\.pyc$']
 
 let g:syntastic_javascript_checkers = ['jshint']
-
-
-
