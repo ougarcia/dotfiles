@@ -11,16 +11,14 @@ export EDITOR="vim"
 
 ## Updating Path
 
-# Recommended by rbenv
-PATH="$HOME/.rbenv/bin:$PATH"
-
-# shouldn't need to zsh argument, but w/e
+# TODO: Figure out why this requires the zsh argument
 eval "$(rbenv init - zsh)"
 
 # enable shims for pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # for postgresql
+# TODO: Install postgres w/o Postgers.app
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 PATH="$PATH:$HOME/.bin"
 
