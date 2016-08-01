@@ -38,5 +38,6 @@ source $ZSH/oh-my-zsh.sh
 alias v="vim"
 alias t="tmux"
 alias ta="tmux a -t"
+alias https='http --default-scheme=https'
 
 alias gll='git log --oneline'

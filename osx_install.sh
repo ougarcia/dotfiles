@@ -19,6 +19,7 @@ brew install the_silver_searcher
 brew install tree
 brew install reattach-to-user-namespace
 brew install phantomjs
+brew install httpie
 
 #install brew-cask & gui tools
 brew tap caskroom/cask
