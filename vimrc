@@ -22,9 +22,10 @@ Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-fugitive'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
 Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
+"Plugin 'python-rope/ropevim'
+Plugin 'tpope/vim-surround'
 
 
 " All Plugins must be added before the following line
@@ -32,43 +33,58 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
 
-" colorscheme
+" Colorscheme
 set background=dark
 colorscheme base16-default
-" use soft tabs (2 spaces)
+
+" Use soft tabs (2 spaces)
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" Use 4 spaces for html and css(not by choice)
+autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType css setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType scss setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
 autocmd Filetype javascript setlocal sw=4
 
-" because git
+" Because git
 set nobackup
 set nowritebackup
 set noswapfile
-" set relative numberlines but show the line number of the one i'm on
+
+" Set relative numberlines but show the line number of the one i'm on (Currently
+" trying out vim without numbers)
 set relativenumber
 set number
-" show the 80 char rule
-set colorcolumn=81
-set textwidth=80
+
+
+" Show the 80 char rule
+"   -- temporarily (begrudgingly) try out 90 chars
+set colorcolumn=91
+set textwidth=90
+
 " Use case insensitive search except when using capital letters, search incrementally
 set ignorecase
 set smartcase
 set incsearch
-" cursor position, incomplete commands, two line status bar
+
+" Cursor position, incomplete commands, two line status bar
 set ruler
 set showcmd
 set laststatus=2
-" Exit insert mode instantaneously at the cost of no escape sequences
-"set noesckeys
+
+" Eliminate delays on ESC
+"   This delay exists because many keys (arrows keys, ALT) rely on it as an
+"   escape character. 
 set ttimeoutlen=5
 
 " For OSX, vim, & tmux clipboard integration
 set clipboard=unnamed
 
-"map space to leader
+" map space to leader
 let mapleader = " "
 
 " Should be default
@@ -123,9 +139,10 @@ let g:syntastic_haml_checkers = ['haml_lint']
 "let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_checkers = ['mri']
 "run linter on opening file
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 
 let g:syntastic_python_checkers = ['pep8']
+"let g:syntastic_python_checkers = ['prospector']
 
 "annoying errors in erb
 let g:syntastic_eruby_ruby_quiet_messages =
@@ -143,3 +160,8 @@ set mouse=a
 let NERDTreeIgnore = ['\.pyc$']
 
 let g:syntastic_javascript_checkers = ['jshint']
+
+let g:syntastic_error_symbol = ">"
+let g:syntastic_style_error_symbol = ">"
+let g:syntastic_warning_symbol = ">"
+let g:syntastic_style_warning_symbol = ">"
