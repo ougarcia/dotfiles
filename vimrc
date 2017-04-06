@@ -15,7 +15,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/tmuxline.vim'
 Plugin 'jszakmeister/vim-togglecursor'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'rking/ag.vim'
@@ -49,6 +49,7 @@ autocmd FileType css setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType scss setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 autocmd Filetype javascript setlocal sw=4
+autocmd FileType dtml setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " Because git
 set nobackup
@@ -61,10 +62,10 @@ set relativenumber
 set number
 
 
-" Show the 80 char rule
-"   -- temporarily (begrudgingly) try out 90 chars
-set colorcolumn=91
-set textwidth=90
+" Show the 100 char rule
+"   -- temporarily (begrudgingly) try out 100 chars
+set colorcolumn=101
+set textwidth=100
 
 " Use case insensitive search except when using capital letters, search incrementally
 set ignorecase
@@ -98,12 +99,13 @@ nnoremap <Leader>X :xa<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
 nnoremap <leader><leader> <c-^>
-nnoremap <Leader>g :vertical resize 85<CR>
-nnoremap <Leader>G :vertical resize 88<CR>
+nnoremap <Leader>g :vertical resize 101<CR>
+nnoremap <Leader>G :vertical resize 105<CR>
 nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>rc :source ~/.vimrc<CR>
-nnoremap <Leader>ES :SyntasticCheck eslint<CR>
-nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>es :SyntasticCheck eslint<CR>
+nnoremap <Leader>tt :tabedit<CR>
+nnoremap <Leader>tb :TagbarToggle<CR>
 
 " Shortcuts for Vim-fugitive
 nnoremap <Leader>gs :Gstatus<CR>
@@ -132,14 +134,17 @@ map <Leader>nf :NERDTreeFind<CR>
 " insert lines without entering insert mode
 nmap <CR> O<Esc>j
 
+" Manually run prospector
+nnoremap <Leader>lp :SyntasticCheck prospector<CR>
+
 " specify linters
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_haml_checkers = ['haml_lint']
 " Stupid warning message in rubocop. Have to take time to fix this soon.
 "let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_checkers = ['mri']
 "run linter on opening file
-let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_open = 1
 
 let g:syntastic_python_checkers = ['pep8']
 "let g:syntastic_python_checkers = ['prospector']
@@ -153,13 +158,11 @@ let g:airline_powerline_fonts = 1
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+set list listchars=tab:··,trail:·,nbsp:·
 
 set mouse=a
 
 let NERDTreeIgnore = ['\.pyc$']
-
-let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_error_symbol = ">"
 let g:syntastic_style_error_symbol = ">"
