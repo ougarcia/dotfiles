@@ -18,24 +18,22 @@ brew install zsh
 brew install the_silver_searcher
 brew install tree
 brew install reattach-to-user-namespace
-brew install phantomjs
 brew install httpie
 
 #install brew-cask & gui tools
 brew tap caskroom/cask
 
 brew cask install google-chrome
-brew cask install google-drive
 brew cask install atom
 brew cask install postgres
 brew cask install flux
 brew cask install vlc
 brew cask install iterm2
 brew cask install evernote
-brew cask install todoist
 brew cask install slack
-brew cask install karabiner
+brew cask install karabiner-elements
 brew cask install postman
+brew cask install hipchat
 
 
 #get ruby up and running
