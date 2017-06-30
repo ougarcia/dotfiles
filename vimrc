@@ -81,9 +81,6 @@ set laststatus=2
 "   escape character. 
 set ttimeoutlen=5
 
-" For OSX, vim, & tmux clipboard integration
-set clipboard=unnamed
-
 " map space to leader
 let mapleader = " "
 
