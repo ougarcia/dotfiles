@@ -19,6 +19,7 @@ brew install the_silver_searcher
 brew install tree
 brew install reattach-to-user-namespace
 brew install httpie
+brew install fpp
 
 #install brew-cask & gui tools
 brew tap caskroom/cask
