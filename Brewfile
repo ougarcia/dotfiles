@@ -18,6 +18,7 @@ brew "vim"
 brew "wget"
 brew "zsh"
 
+cask "aerial"
 cask "evernote"
 cask "flux"
 cask "google-chrome"
