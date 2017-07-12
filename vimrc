@@ -164,3 +164,13 @@ let g:syntastic_error_symbol = ">"
 let g:syntastic_style_error_symbol = ">"
 let g:syntastic_warning_symbol = ">"
 let g:syntastic_style_warning_symbol = ">"
+
+if executable("rg")
+  set grepprg=rg\ --vimgrep
+  set grepformat^=%f:%l:%c:%m
+endif
+
+command! -nargs=+ Rg execute 'silent grep <args>' | copen
+command! -nargs=+ F execute "grep -SF -g '!*tests*' <args>"
+
+" TODO: Remove silver searcher once I"m confident with ripgrep
