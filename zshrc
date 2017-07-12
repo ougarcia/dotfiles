@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="pure"
 
-plugins=(git bundler brew rails rvm)
+plugins=(git bundler brew rvm)
 
 export EDITOR="vim"
 
@@ -35,9 +35,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
-alias v="vim"
-alias t="tmux"
-alias ta="tmux a -t"
+alias v='vim'
+alias t='tmux'
+alias ta='tmux a -t'
 alias https='http --default-scheme=https'
 
+alias vssh='TERM=xterm vagrant ssh'
+
 alias gll='git log --oneline'
+
