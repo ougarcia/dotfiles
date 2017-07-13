@@ -166,11 +166,31 @@ let g:syntastic_warning_symbol = ">"
 let g:syntastic_style_warning_symbol = ">"
 
 if executable("rg")
-  set grepprg=rg\ --vimgrep
+  " rg uses multiple threads to search. This has two notable consequences
+  "   1. The search is fast.
+  "   2. The result order is nondeterministic.
+  "
+  " rg has the option to return sorted results, but that runs the search in a
+  " single thread and is too slow.
+  "
+  " This is a dirty hack that lets me search in parallel and then sort the
+  " output. The hacky part is figuring out how to use a pip when setting the
+  " grep program.  The pipe is escaped as `\\\|` an escaped backslash and an
+  " escaped pipe produce `\|`, which undergoes one more round of processing to
+  " end up with `|`.
+  "
+  " Since the sort is O(nlog(n)) on the number of results, the
+  " added time is negligible on specific search and is not that bad on general
+  " ones.
+  set grepprg=rg\ --vimgrep\ $*\\\|sort
   set grepformat^=%f:%l:%c:%m
 endif
 
-command! -nargs=+ Rg execute 'silent grep <args>' | copen
-command! -nargs=+ F execute "grep -SF -g '!*tests*' <args>"
+command! -nargs=+ F execute "silent grep -SF -g '!*tests*' <args>" | copen
 
-" TODO: Remove silver searcher once I"m confident with ripgrep
+autocmd FileType make setlocal noexpandtab
+
+" TODO: Remove silver searcher once I"m confident with ripgrep.
+" TODO: Use neovim.
+" TODO: Use neomake.
+" TODO: Use a maintained plugin manager.
