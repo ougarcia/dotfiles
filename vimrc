@@ -40,15 +40,6 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" Use 4 spaces for html and css. Won't need this after I have editorconfig
-" working.
-autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType dtml setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType css setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType scss setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd Filetype javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd Filetype jsx setlocal shiftwidth=4 tabstop=4 softtabstop=4
-
 autocmd FileType make setlocal noexpandtab
 
 " Because git
