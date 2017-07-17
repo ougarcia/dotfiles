@@ -164,17 +164,30 @@ if executable("rg")
   set grepprg=rg\ --vimgrep\ $*\\\|sort
   set grepformat^=%f:%l:%c:%m
 
+  " Nicer than built-in :grep.
   command! -nargs=+ Gr execute "silent grep <args>" | copen
-  command! -nargs=+ Fa execute "silent grep -SF <args>" | copen
-  command! -nargs=+ F execute "silent grep -SF -g '!*tests*' <args>" | copen
+
+  " Smart-case and literal string.
+  command! -nargs=+ Ga execute "Gr -SF <args>"
+
+  " Only look in tests.
+  command! -nargs=+ Gt execute "Ga -g '*tests*' <args>"
+
+  " Don't look in tests.
+  command! -nargs=+ G execute "Ga -g '!*tests*' <args>"
 endif
 
 " TODO: Remove silver searcher once I"m confident with ripgrep.
 " TODO: Use neovim.
-" TODO: Use neomake.
+" TODO: Use neomake or ALE.
 " TODO: Use a maintained plugin manager.
 " TODO: Use rg instead of ag for ctrlp
-" TODO: Replace ctrlp with something newer.
+" TODO: Replace ctrlp with something newer and faster. Probably using tags somehow.
 " TODO: Use local vimrc for projects with weird conventions. (or editorconfig)
 " TODO: Remove vim airline
-" TODO: Use vim-commentary
+" TODO: Switch to vim-commentary
+" TODO: Use wildmenu
+" TODO: Use augroup
+" TODO: Improve copy-paste experience.
+
+" Tip: Use `:b substr_of_filename` to quickly open previously opened file. Workes well with wildmenu
