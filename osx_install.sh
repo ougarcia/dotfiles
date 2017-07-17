@@ -26,27 +26,27 @@ if ! xcode-select --print-path &> /dev/null; then
 
 fi
 
-#install homebrew & command line tools
+# Install homebrew & command line tools
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew bundle
 
-#install oh-my-zsh
+# Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-#install dotfiles
+# Install dotfiles
 bash ~/.dotfiles/dotfiles_install.sh
 
-#setup plugins for vim
+# Install plugins for vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
-#install plugins for tmux
+# Install plugins for tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-# Install the `pure` zsh theme
+# Install `pure` zsh theme
 git clone https://github.com/sindresorhus/pure.git /tmp/pure
 cp /tmp/pure/pure.zsh ~/.oh-my-zsh/custom/pure.zsh-theme
 cp /tmp/pure/async.zsh ~/.oh-my-zsh/custom/async.zsh
@@ -56,3 +56,6 @@ rbenv install 2.4.1 --verbose
 rbenv global 2.4.1
 gem update --system
 gem install bundler rubocop
+
+# TODO: Use pyenv.
+# TODO: See if I can get a build going for this

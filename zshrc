@@ -44,3 +44,4 @@ alias vssh='TERM=xterm vagrant ssh'
 
 alias gll='git log --oneline'
 
+# TODO: Write an alias for git diff without comments.
