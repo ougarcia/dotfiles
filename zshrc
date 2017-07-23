@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="pure"
 
-plugins=(git bundler brew rvm)
+plugins=(brew bundler docker git rvm)
 
 export EDITOR="vim"
 
