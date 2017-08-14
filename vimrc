@@ -17,13 +17,11 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jszakmeister/vim-togglecursor'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
-
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,33 +30,33 @@ syntax on
 
 " Colorscheme
 set background=dark
-colorscheme base16-default
+colorscheme base16-default-dark
 
-" Use soft tabs (2 spaces)
+" Use two spaces
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" But Makefiles require tabs
 autocmd FileType make setlocal noexpandtab
 
-" Because git
+" Don't need these because git
 set nobackup
 set nowritebackup
 set noswapfile
 
-" Set relative numberlines but show the line number of the one i'm on (Currently
-" trying out vim without numbers)
+" Numbers
 set relativenumber
 set number
 
 
-" Show the 100 char rule
-"   -- temporarily (begrudgingly) try out 100 chars
-set colorcolumn=101
-set textwidth=100
+" Show the 80 char rule
+set textwidth=80
+set colorcolumn=+1
 
-" Use case insensitive search except when using capital letters, search incrementally
+" Use case insensitive search except when using capital letters, search
+" incrementally
 set ignorecase
 set smartcase
 set incsearch
@@ -87,17 +85,12 @@ let mapleader = " "
 nnoremap Y y$
 
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>W :wa<CR>
 nnoremap <Leader>x :x<CR>
-nnoremap <Leader>X :xa<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>Q :qa<CR>
-nnoremap <leader><leader> <c-^>
 nnoremap <Leader>g :vertical resize 101<CR>
 nnoremap <Leader>G :vertical resize 105<CR>
 nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>rc :source ~/.vimrc<CR>
-nnoremap <Leader>es :SyntasticCheck eslint<CR>
 nnoremap <Leader>tt :tabedit<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>gs :Gstatus<CR>
@@ -121,14 +114,11 @@ let g:syntastic_haml_checkers = ['haml_lint']
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_python_checkers = ['pep8']
 
-" Temporary configs.
+" Temporary configs: Enabled when working on a repo small enough that these
+" options don't take forever.
 
-" When working on a repo small enough that these options don't take forever.
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_python_checkers = ['prospector']
-
-" Use ag in CtrlP for listing files.
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 let NERDTreeIgnore = ['\.pyc$']
 
@@ -136,8 +126,6 @@ let g:syntastic_error_symbol = ">"
 let g:syntastic_style_error_symbol = ">"
 let g:syntastic_warning_symbol = ">"
 let g:syntastic_style_warning_symbol = ">"
-
-let g:EditorConfig_exec_path = 'Path to your EditorConfig Core executable'
 
 " Ensure fugitive works, avoid loading EditorConfig for any remote files over
 " ssh.
@@ -177,17 +165,18 @@ if executable("rg")
   command! -nargs=+ G execute "Ga -g '!*tests*' <args>"
 endif
 
-" TODO: Remove silver searcher once I"m confident with ripgrep.
 " TODO: Use neovim.
 " TODO: Use neomake or ALE.
 " TODO: Use a maintained plugin manager.
-" TODO: Use rg instead of ag for ctrlp
-" TODO: Replace ctrlp with something newer and faster. Probably using tags somehow.
+" TODO: Replace ctrlp with something newer/faster. Probably using tags somehow.
 " TODO: Use local vimrc for projects with weird conventions. (or editorconfig)
 " TODO: Remove vim airline
 " TODO: Switch to vim-commentary
 " TODO: Use wildmenu
 " TODO: Use augroup
 " TODO: Improve copy-paste experience.
+" TODO: Switch to gruvbox
+" TODO: Automatically sort quickfix instead of piping to sort for :grep
 
-" Tip: Use `:b substr_of_filename` to quickly open previously opened file. Workes well with wildmenu
+" Tip: Use `:b substr_of_filename` to quickly open previously opened file. Works
+"      well with wildmenu
