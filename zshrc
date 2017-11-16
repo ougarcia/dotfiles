@@ -9,6 +9,8 @@ plugins=(brew bundler docker git rvm)
 
 export EDITOR="vim"
 
+export HOMEBREW_NO_GITHUB_API=1
+
 ## Updating Path
 
 # TODO: Figure out why this requires the zsh argument
@@ -45,3 +47,6 @@ alias vssh='TERM=xterm vagrant ssh'
 alias gll='git log --oneline'
 
 # TODO: Write an alias for git diff without comments.
+# TODO: Use https://github.com/sharkdp/fd
+# TODO: Modern alternatives to common unix tools:
+#   xsv, exa, una, tokei,
