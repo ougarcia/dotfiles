@@ -25,9 +25,6 @@ brew "tree"
 brew "vim"
 brew "wget"
 
-# Service CLIs
-brew "heroku"
-
 # GUI stuff
 cask "1password"
 cask "aerial"

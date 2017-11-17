@@ -30,9 +30,6 @@ if [ -f ~/.nvm/nvm.sh ]; then
   nvm alias default 0.10 > /dev/null
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 ## End updating path
 
 source $ZSH/oh-my-zsh.sh
