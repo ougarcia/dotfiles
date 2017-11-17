@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+# Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -7,20 +7,24 @@ ZSH_THEME="pure"
 
 plugins=(brew bundler docker git rvm)
 
+## Set enviornment Variables
 export EDITOR="vim"
-
 export HOMEBREW_NO_GITHUB_API=1
 
-## Updating Path
+## Update PATH
 
 # TODO: Figure out why this requires the zsh argument
-eval "$(rbenv init - zsh)"
+if which rvenv > /dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
 
-# enable shims for pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# enable shims for pyenv if installed
+if which pyenv > /dev/null;
+  then eval "$(pyenv init -)"
+fi
 
 # for postgresql
-# TODO: Install postgres w/o Postgers.app
+# TODO: Install postgres w/o Postgres.app
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 PATH="$PATH:$HOME/.bin"
 
@@ -30,10 +34,9 @@ if [ -f ~/.nvm/nvm.sh ]; then
   nvm alias default 0.10 > /dev/null
 fi
 
-## End updating path
-
 source $ZSH/oh-my-zsh.sh
 
+## Aliases
 alias v='vim'
 alias t='tmux'
 alias ta='tmux a -t'
@@ -45,5 +48,4 @@ alias gll='git log --oneline'
 
 # TODO: Write an alias for git diff without comments.
 # TODO: Use https://github.com/sharkdp/fd
-# TODO: Modern alternatives to common unix tools:
-#   xsv, exa, una, tokei,
+# TODO: Modern alternatives to classic unix tools: xsv, exa, una, tokei
