@@ -1,35 +1,45 @@
+# Casks
 tap "caskroom/cask"
 tap "caskroom/fonts"
 
-brew "fpp"
-brew "git"
-brew "heroku"
-brew "httpie"
-brew "mas"
+# Languages and environments
+brew "go"
 brew "node"
 brew "postgresql"
-brew "ruby-build"
+brew "pyenv"
 brew "rbenv"
+brew "ruby-build"
+brew "sqlite"
+brew "zsh"
+
+# Tools
+brew "ctags"
+brew "findutils"
+brew "fpp"
+brew "git"
+brew "mas"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
-brew "the_silver_searcher"
 brew "tmux"
 brew "tree"
 brew "vim"
 brew "wget"
-brew "zsh"
 
+# Service CLIs
+brew "heroku"
+
+# GUI stuff
+cask "1password"
 cask "aerial"
 cask "evernote"
 cask "flux"
 cask "google-chrome"
-cask "hipchat"
 cask "iterm2"
 cask "karabiner-elements"
 cask "postman"
 cask "slack"
 cask "vlc"
-cask "1password"
 
-cask "font-source-code-pro"
+# Fonts
 cask "font-fira-code"
+cask "font-source-code-pro"
