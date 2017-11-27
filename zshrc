@@ -14,7 +14,7 @@ export HOMEBREW_NO_GITHUB_API=1
 ## Update PATH
 
 # TODO: Figure out why this requires the zsh argument
-if which rvenv > /dev/null; then
+if which rbenv > /dev/null; then
   eval "$(rbenv init - zsh)"
 fi
 

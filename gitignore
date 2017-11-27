@@ -6,3 +6,5 @@ node_modules
 a.out
 
 tags
+
+.python-version
