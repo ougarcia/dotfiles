@@ -129,7 +129,7 @@ let g:syntastic_style_warning_symbol = ">"
 
 " Ensure fugitive works, avoid loading EditorConfig for any remote files over
 " ssh.
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*', '\.git.*']
 
 if executable("rg")
   " rg uses multiple threads to search. This has two notable consequences
