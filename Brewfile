@@ -13,6 +13,7 @@ brew "sqlite"
 brew "zsh"
 
 # Tools
+brew "colordiff"
 brew "ctags"
 brew "findutils"
 brew "fpp"
