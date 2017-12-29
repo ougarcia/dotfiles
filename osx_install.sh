@@ -57,5 +57,9 @@ rbenv global 2.4.1
 gem update --system
 gem install bundler rubocop
 
-# TODO: Use pyenv.
+# Python stuff
+pyenv install 2.7.13
+pyenv install 3.6.3
+pyenv global 2.7.13 3.6.3
+
 # TODO: See if I can get a build going for this
