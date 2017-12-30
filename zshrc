@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="pure"
 
-plugins=(brew bundler docker git rvm)
+plugins=(brew docker git)
 
 ## Set enviornment Variables
 export EDITOR="vim"
@@ -28,19 +28,12 @@ fi
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 PATH="$PATH:$HOME/.bin"
 
-# node version manager
-if [ -f ~/.nvm/nvm.sh ]; then
-  source ~/.nvm/nvm.sh
-  nvm alias default 0.10 > /dev/null
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 ## Aliases
 alias v='vim'
 alias t='tmux'
 alias ta='tmux a -t'
-alias https='http --default-scheme=https'
 
 alias vssh='TERM=xterm vagrant ssh'
 
