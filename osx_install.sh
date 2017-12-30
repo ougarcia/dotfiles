@@ -37,10 +37,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Install dotfiles
 bash ~/.dotfiles/dotfiles_install.sh
 
-# Install plugins for vim
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
 # Install plugins for tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
@@ -63,3 +59,4 @@ pyenv install 3.6.3
 pyenv global 2.7.13 3.6.3
 
 # TODO: See if I can get a build going for this
+# TODO: Make idempotent
