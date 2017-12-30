@@ -148,7 +148,6 @@ if executable('rg')
 endif
 
 " TODO: Use neovim.
-" TODO: Replace ctrlp with something newer/faster. Probably using tags somehow.
 " TODO: Remove vim airline
 " TODO: Switch to vim-commentary
 " TODO: Use wildmenu
