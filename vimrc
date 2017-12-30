@@ -155,6 +155,7 @@ endif
 " TODO: Improve copy-paste experience.
 " TODO: Switch to gruvbox
 " TODO: Automatically sort quickfix instead of piping to sort for :grep
+" TODO: Reconsider tabstop
 
 " Tip: Use `:b substr_of_filename` to quickly open previously opened file. Works
 "      well with wildmenu
