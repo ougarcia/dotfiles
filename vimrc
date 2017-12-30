@@ -19,12 +19,12 @@ Plug 'jszakmeister/vim-togglecursor'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -79,7 +79,7 @@ set list listchars=tab:··,trail:·,nbsp:·
 set mouse=a
 
 " map space to leader
-let mapleader = " "
+let g:mapleader = ' '
 
 " Should be default
 nnoremap Y y$
@@ -107,31 +107,13 @@ nnoremap <C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFind<CR>
 
-nnoremap <Leader>lp :SyntasticCheck prospector<CR>
-
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_haml_checkers = ['haml_lint']
-let g:syntastic_ruby_checkers = ['mri']
-let g:syntastic_python_checkers = ['pep8']
-
-" Temporary configs: Enabled when working on a repo small enough that these
-" options don't take forever.
-
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_python_checkers = ['prospector']
-
-let NERDTreeIgnore = ['\.pyc$']
-
-let g:syntastic_error_symbol = ">"
-let g:syntastic_style_error_symbol = ">"
-let g:syntastic_warning_symbol = ">"
-let g:syntastic_style_warning_symbol = ">"
+let g:NERDTreeIgnore = ['\.pyc$']
 
 " Ensure fugitive works, avoid loading EditorConfig for any remote files over
 " ssh.
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*', '\.git.*']
 
-if executable("rg")
+if executable('rg')
   " rg uses multiple threads to search. This has two notable consequences
   "   1. The search is fast.
   "   2. The result order is nondeterministic.
@@ -166,7 +148,6 @@ if executable("rg")
 endif
 
 " TODO: Use neovim.
-" TODO: Use neomake or ALE.
 " TODO: Replace ctrlp with something newer/faster. Probably using tags somehow.
 " TODO: Remove vim airline
 " TODO: Switch to vim-commentary

@@ -58,5 +58,10 @@ pyenv install 2.7.13
 pyenv install 3.6.3
 pyenv global 2.7.13 3.6.3
 
+pip install flake8
+pip3 install flake8
+
+pyenv rehash
+
 # TODO: See if I can get a build going for this
 # TODO: Make idempotent
