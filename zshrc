@@ -31,7 +31,7 @@ PATH="$PATH:$HOME/.bin"
 source $ZSH/oh-my-zsh.sh
 
 ## Aliases
-alias v='vim'
+alias v='nvim'
 alias t='tmux'
 alias ta='tmux a -t'
 
