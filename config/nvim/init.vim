@@ -14,12 +14,13 @@ Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
@@ -94,10 +95,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-map <C-n> :NERDTreeToggle<CR>
-map <Leader>nf :NERDTreeFind<CR>
-
-let g:NERDTreeIgnore = ['\.pyc$']
+let g:netrw_list_hide= '.*\.pyc$'
 
 " Ensure fugitive works, avoid loading EditorConfig for any remote files over
 " ssh.
