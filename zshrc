@@ -8,7 +8,7 @@ ZSH_THEME="pure"
 plugins=(brew docker git)
 
 ## Set enviornment Variables
-export EDITOR="vim"
+export EDITOR="nvim"
 export HOMEBREW_NO_GITHUB_API=1
 
 ## Update PATH
