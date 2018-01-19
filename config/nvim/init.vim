@@ -9,9 +9,7 @@ endif
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'majutsushi/tagbar'
 Plug 'sheerun/vim-polyglot'
@@ -21,7 +19,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
 call plug#end()
@@ -30,42 +27,23 @@ call plug#end()
 set background=dark
 colorscheme base16-default-dark
 
-" Use two spaces
-set tabstop=2
+" Two spaces
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-
-" But Makefiles require tabs
-autocmd FileType make setlocal noexpandtab
-
-" Don't need these because git
-set nobackup
-set nowritebackup
-set noswapfile
-
-" Numbers
-set relativenumber
-set number
 
 " Show the 80 char rule
 set textwidth=80
 set colorcolumn=+1
 
-" Use case insensitive search except when using capital letters, search
-" incrementally
+" Use case insensitive search except when using capital letters
 set ignorecase
 set smartcase
-set incsearch
-
-" Eliminate delays on ESC
-"   This delay exists because many keys (arrows keys, ALT) rely on it as an
-"   escape character.
-set ttimeoutlen=5
 
 set splitbelow
 set splitright
 
+" Use to be a nvim default, but was removed until mouse=a is improved
 set mouse=a
 
 " map space to leader
@@ -95,10 +73,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-let g:netrw_list_hide= '.*\.pyc$'
-
 " Ensure fugitive works, avoid loading EditorConfig for any remote files over
-" ssh.
+" ssh. Don't use EditorConfig for commit messages
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*', '\.git.*']
 
 if executable('rg')
@@ -135,15 +111,6 @@ if executable('rg')
   command! -nargs=+ G execute "Ga -g '!*tests*' <args>"
 endif
 
-" TODO: Use neovim.
-" TODO: Remove vim airline
-" TODO: Switch to vim-commentary
-" TODO: Use wildmenu
 " TODO: Use augroup
-" TODO: Improve copy-paste experience.
-" TODO: Switch to gruvbox
 " TODO: Automatically sort quickfix instead of piping to sort for :grep
-" TODO: Reconsider tabstop
-
-" Tip: Use `:b substr_of_filename` to quickly open previously opened file. Works
-"      well with wildmenu
+" TODO: Figure out filesearch
