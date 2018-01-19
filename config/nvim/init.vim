@@ -2,7 +2,10 @@
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+
+  augroup plugin_install
+    autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+  augroup END
 endif
 
 " Install plugins
@@ -111,6 +114,5 @@ if executable('rg')
   command! -nargs=+ G execute "Ga -g '!*tests*' <args>"
 endif
 
-" TODO: Use augroup
 " TODO: Automatically sort quickfix instead of piping to sort for :grep
 " TODO: Figure out filesearch
