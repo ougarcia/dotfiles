@@ -12,8 +12,8 @@ endif
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'lifepillar/vim-solarized8'
 Plug 'majutsushi/tagbar'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -27,8 +27,11 @@ Plug 'w0rp/ale'
 call plug#end()
 
 " Colorscheme
+set termguicolors
 set background=dark
-colorscheme base16-default-dark
+colorscheme solarized8_flat
+let g:solarized_term_italics = 1
+let g:solarized_extra_hi_groups = 1
 
 " Two spaces
 set softtabstop=2
@@ -89,8 +92,8 @@ if executable('rg')
   " single thread and is too slow.
   "
   " This is a dirty hack that lets me search in parallel and then sort the
-  " output. The hacky part is figuring out how to use a pip when setting the
-  " grep program.  The pipe is escaped as `\\\|` an escaped backslash and an
+  " output. The hacky part is figuring out how to use a pipe when setting
+  " grepprg.  The pipe is escaped as `\\\|`. An escaped backslash and an
   " escaped pipe produce `\|`, which undergoes one more round of processing to
   " end up with `|`.
   "
