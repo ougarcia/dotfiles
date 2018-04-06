@@ -49,6 +49,8 @@ set smartcase
 set splitbelow
 set splitright
 
+set wildignore+=*.pyc
+
 " Use to be a nvim default, but was removed until mouse=a is improved
 set mouse=a
 
@@ -119,3 +121,8 @@ endif
 
 " TODO: Automatically sort quickfix instead of piping to sort for :grep
 " TODO: Figure out filesearch
+" TODO: Look into gv.vim
+" TODO: Look into michaeljsmith/vim-indent-obj
+" TODO: gen_tags.vim and gtags
+" TODO: Syntax highlighting for pipfiles.
+" TODO: goyo + limelight + vim-markdown (to replace ulysses)
