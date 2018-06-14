@@ -13,8 +13,12 @@ call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'majutsushi/tagbar'
+Plug 'plasticboy/vim-markdown'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -53,6 +57,9 @@ set wildignore+=*.pyc
 
 " Use to be a nvim default, but was removed until mouse=a is improved
 set mouse=a
+
+" TODO: Learn to use folds and reenable this
+let g:vim_markdown_folding_disabled = 1
 
 " map space to leader
 let g:mapleader = ' '
@@ -118,6 +125,12 @@ if executable('rg')
   " Don't look in tests.
   command! -nargs=+ G execute "Ga -g '!*tests*' <args>"
 endif
+
+
+augroup goyo
+  autocmd! User GoyoEnter Limelight
+  autocmd! User GoyoLeave Limelight!
+augroup END
 
 " TODO: Automatically sort quickfix instead of piping to sort for :grep
 " TODO: Figure out filesearch

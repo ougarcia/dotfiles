@@ -42,3 +42,4 @@ alias gll='git log --oneline'
 # TODO: Write an alias for git diff without comments.
 # TODO: Use https://github.com/sharkdp/fd
 # TODO: Modern alternatives to classic unix tools: xsv, exa, una, tokei
+# TODO: Use tmuxp

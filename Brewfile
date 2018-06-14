@@ -16,6 +16,7 @@ brew "zsh"
 # Tools
 brew "colordiff"
 brew "ctags"
+brew "fd"
 brew "findutils"
 brew "fpp"
 brew "git"
