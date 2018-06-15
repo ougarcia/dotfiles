@@ -42,10 +42,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
 
+# TODO: This install doesn't work anymore. New instructions on theme readme.
 # Install `pure` zsh theme
-git clone https://github.com/sindresorhus/pure.git /tmp/pure
-cp /tmp/pure/pure.zsh ~/.oh-my-zsh/custom/pure.zsh-theme
-cp /tmp/pure/async.zsh ~/.oh-my-zsh/custom/async.zsh
+# git clone https://github.com/sindresorhus/pure.git /tmp/pure
+# cp /tmp/pure/pure.zsh ~/.oh-my-zsh/custom/pure.zsh-theme
+# cp /tmp/pure/async.zsh ~/.oh-my-zsh/custom/async.zsh
 
 # Ruby stuff
 rbenv install 2.4.1 --verbose
@@ -54,9 +55,9 @@ gem update --system
 gem install bundler rubocop
 
 # Python stuff
-pyenv install 2.7.13
-pyenv install 3.6.3
-pyenv global 2.7.13 3.6.3
+pyenv install 2.7.15
+pyenv install 3.6.5
+pyenv global 2.7.15 3.6.5
 
 pip install flake8
 pip3 install flake8
