@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="pure"
+ZSH_THEME=""
 
 plugins=(brew docker git)
 
@@ -29,6 +29,9 @@ PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 PATH="$PATH:$HOME/.bin"
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -U promptinit; promptinit
+prompt pure
 
 ## Aliases
 alias v='nvim'
