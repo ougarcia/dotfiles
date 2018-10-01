@@ -1,3 +1,6 @@
+export FZF_DEFAULT_COMMAND='fd --type file'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -37,9 +40,7 @@ prompt pure
 alias v='nvim'
 alias t='tmux'
 alias ta='tmux a -t'
-
 alias vssh='TERM=xterm vagrant ssh'
-
 alias gll='git log --oneline'
 
 # TODO: Write an alias for git diff without comments.

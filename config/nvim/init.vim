@@ -28,6 +28,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 
+Plug '/usr/local/opt/fzf'
+
 call plug#end()
 
 " Colorscheme
@@ -67,6 +69,7 @@ let g:mapleader = ' '
 " Should be default
 nnoremap Y y$
 
+nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>l :noh<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x :x<CR>
