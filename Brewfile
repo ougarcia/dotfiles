@@ -14,6 +14,7 @@ brew "sqlite"
 brew "zsh"
 
 # Tools
+brew "bat"
 brew "colordiff"
 brew "ctags"
 brew "fd"
@@ -32,7 +33,6 @@ brew "tree"
 # GUI stuff
 cask "1password"
 cask "aerial"
-cask "evernote"
 cask "firefox"
 cask "flux"
 cask "google-chrome"
