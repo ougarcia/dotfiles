@@ -22,12 +22,6 @@ done
 
 for directory in $XDG_CONFIGS
 do
-  application_name=$(basename "$directory")
-  paths="$directory/*"
-
-  for path in $paths
-  do
-    filename=$(basename "$path")
-    ln -sf "$path" "$HOME/.config/$application_name/$filename"
-  done
+  filename="$(basename $directory)"
+  ln -sf "$directory" "$HOME/.config/$filename"
 done
