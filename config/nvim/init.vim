@@ -27,6 +27,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
+Plug 'morhetz/gruvbox'
 
 Plug '/usr/local/opt/fzf'
 
@@ -35,7 +36,9 @@ call plug#end()
 " Colorscheme
 set termguicolors
 set background=dark
-colorscheme solarized8_flat
+" let g:gruvbox_contrast_dark = "light"
+" let g:gruvbox_contrast_dark = "dark"
+colorscheme gruvbox
 let g:solarized_term_italics = 1
 let g:solarized_extra_hi_groups = 1
 
@@ -77,7 +80,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>g :vertical resize 101<CR>
 nnoremap <Leader>G :vertical resize 105<CR>
 nnoremap <Leader>rd :redraw!<CR>
-nnoremap <Leader>rc :source ~/.vimrc<CR>
+nnoremap <Leader>rc :source ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>tt :tabedit<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>gs :Gstatus<CR>
