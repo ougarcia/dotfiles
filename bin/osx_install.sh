@@ -47,11 +47,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-# TODO: This install doesn't work anymore. New instructions on theme readme.
 # Install `pure` zsh theme
-# git clone https://github.com/sindresorhus/pure.git /tmp/pure
-# cp /tmp/pure/pure.zsh ~/.oh-my-zsh/custom/pure.zsh-theme
-# cp /tmp/pure/async.zsh ~/.oh-my-zsh/custom/async.zsh
+npm install --global pure-prompt
 
 # Ruby stuff
 rbenv install 2.4.1 --verbose
