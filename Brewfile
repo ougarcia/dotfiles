@@ -8,7 +8,6 @@ brew "node"
 brew "pipenv"
 brew "postgresql"
 brew "pyenv"
-brew "rbenv"
 brew "ruby-build"
 brew "sqlite"
 brew "zsh"
@@ -48,3 +47,5 @@ cask "vlc"
 # Fonts
 cask "font-fira-code"
 cask "font-source-code-pro"
+
+# TODO: Replace pipenv with poetry. Hoping for a formula soon.

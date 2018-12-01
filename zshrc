@@ -10,26 +10,20 @@ ZSH_THEME=""
 
 plugins=(brew docker git)
 
-## Set enviornment Variables
+## Set environment Variables
 export EDITOR="nvim"
-export HOMEBREW_NO_GITHUB_API=1
 
 ## Update PATH
-
-# TODO: Figure out why this requires the zsh argument
-if which rbenv > /dev/null; then
-  eval "$(rbenv init - zsh)"
-fi
 
 # enable shims for pyenv if installed
 if which pyenv > /dev/null;
   then eval "$(pyenv init -)"
 fi
 
-# for postgresql
-# TODO: Install postgres w/o Postgres.app
-PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
-PATH="$PATH:$HOME/.bin"
+# Poetry if installed
+if [ -f $HOME/.poetry/env ]; then
+    source $HOME/.poetry/env
+fi
 
 source $ZSH/oh-my-zsh.sh
 

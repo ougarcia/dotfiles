@@ -50,12 +50,6 @@ tmux source ~/.tmux.conf
 # Install `pure` zsh theme
 npm install --global pure-prompt
 
-# Ruby stuff
-rbenv install 2.4.1 --verbose
-rbenv global 2.4.1
-gem update --system
-gem install bundler rubocop
-
 # Python stuff
 pyenv install 2.7.15
 pyenv install 3.6.5
@@ -68,3 +62,4 @@ pyenv rehash
 
 # TODO: See if I can get a build going for this
 # TODO: Make idempotent
+# TODO: Install poetry
