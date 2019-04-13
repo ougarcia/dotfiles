@@ -18,6 +18,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'majutsushi/tagbar'
+Plug 'previm/previm'
 Plug 'plasticboy/vim-markdown'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -132,10 +133,18 @@ if executable('rg')
   command! -nargs=+ G execute "Ga -g '!*tests*' <args>"
 endif
 
+let g:ale_linters = {'python': ['flake8']}
+
+let g:previm_open_cmd = 'open -a Safari'
 
 augroup goyo
   autocmd! User GoyoEnter Limelight
   autocmd! User GoyoLeave Limelight!
+augroup END
+
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
 " TODO: Automatically sort quickfix instead of piping to sort for :grep
