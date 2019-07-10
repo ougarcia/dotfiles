@@ -64,6 +64,11 @@ set wildignore+=*.pyc
 " Use to be a nvim default, but was removed until mouse=a is improved
 set mouse=a
 
+" No backup
+set nobackup
+set nowritebackup
+set noswapfile
+
 " TODO: Learn to use folds and reenable this
 let g:vim_markdown_folding_disabled = 1
 
