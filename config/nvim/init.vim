@@ -8,11 +8,15 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   augroup END
 endif
 
+" Use the vim-go plugin instead
+let g:polyglot_disabled = ['go']
+
 " Install plugins
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
