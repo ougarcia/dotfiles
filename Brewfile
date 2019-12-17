@@ -28,6 +28,7 @@ brew "tree"
 # GUI stuff
 cask "1password"
 cask "aerial"
+cask "dash"
 cask "firefox"
 cask "flux"
 cask "google-chrome"
