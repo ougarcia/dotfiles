@@ -11,6 +11,8 @@ DOTFILES=(
   "zshrc"
 )
 
+# TODO: I should be getting the dir the file is in.
+# Instead I'm getting the dir I'm running from.
 DOTFILES_DIRECTORY=$(realpath "$PWD/..")
 
 for dotfile in "${DOTFILES[@]}"
