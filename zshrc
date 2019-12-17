@@ -34,13 +34,14 @@ prompt pure
 alias v='nvim'
 alias t='tmux'
 alias ta='tmux a -t'
-alias vssh='TERM=xterm vagrant ssh'
 alias gll='git log --oneline'
 
 ## Not version-controller configs and aliases
 if [ -f ~/.private-zshrc ]; then
     source ~/.private-zshrc
 fi
+
+eval "$(direnv hook zsh)"
 
 # TODO: Write an alias for git diff without comments.
 # TODO: Use https://github.com/sharkdp/fd
