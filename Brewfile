@@ -1,20 +1,16 @@
 # Casks
-tap "caskroom/cask"
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
 
 # Languages and environments
-brew "go"
 brew "node"
 brew "pipenv"
-brew "postgresql"
 brew "pyenv"
-brew "ruby-build"
-brew "sqlite"
 brew "zsh"
 
 # Tools
 brew "bat"
 brew "colordiff"
+brew "coreutils"
 brew "ctags"
 brew "fd"
 brew "findutils"
@@ -37,12 +33,9 @@ cask "flux"
 cask "google-chrome"
 cask "iterm2"
 cask "karabiner-elements"
-cask "omnifocus"
-cask "postman"
-cask "slack"
+# cask "slack"
 cask "spotify"
 cask "visual-studio-code"
-cask "vlc"
 
 # Fonts
 cask "font-fira-code"
