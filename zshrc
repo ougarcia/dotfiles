@@ -36,12 +36,20 @@ alias t='tmux'
 alias ta='tmux a -t'
 alias gll='git log --oneline'
 
-## Not version-controller configs and aliases
+# Checkout git branch with fzf
+fbr() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+eval "$(direnv hook zsh)"
+
+## Not version-controlled configs and aliases
 if [ -f ~/.private-zshrc ]; then
     source ~/.private-zshrc
 fi
-
-eval "$(direnv hook zsh)"
 
 # TODO: Write an alias for git diff without comments.
 # TODO: Use https://github.com/sharkdp/fd
