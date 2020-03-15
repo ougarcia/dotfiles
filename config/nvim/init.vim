@@ -18,12 +18,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'godlygeek/tabular'
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'majutsushi/tagbar'
-Plug 'previm/previm'
+Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'plasticboy/vim-markdown'
+Plug 'prettier/vim-prettier'
+Plug 'previm/previm'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -32,7 +36,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
-Plug 'morhetz/gruvbox'
 
 Plug '/usr/local/opt/fzf'
 
@@ -95,14 +98,43 @@ nnoremap <Leader>tt :tabedit<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>ge :Gdiff<CR>
-nnoremap <Leader>dg :diffget<CR>
-nnoremap <Leader>dp :diffput<CR>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+nmap <silent> cgd <Plug>(coc-definition)
+nmap <silent> cgy <Plug>(coc-type-definition)
+nmap <silent> cgi <Plug>(coc-implementation)
+nmap <silent> cgr <Plug>(coc-references)
+
+" Show window with documentation when hovering and pressing K
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 
 " Ensure fugitive works, avoid loading EditorConfig for any remote files over
 " ssh. Don't use EditorConfig for commit messages
@@ -142,7 +174,7 @@ if executable('rg')
   command! -nargs=+ G execute "Ga -g '!*tests*' <args>"
 endif
 
-let g:ale_linters = {'python': ['flake8']}
+let g:coc_global_extensions = ['coc-tsserver', 'coc-prettier']
 
 let g:previm_open_cmd = 'open -a Safari'
 
@@ -155,6 +187,14 @@ augroup PrevimSettings
     autocmd!
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+
+let g:ale_linters = {
+\   'python': ['flake8'],
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
+\   'typescriptreact': [],
+\   'graphql': [],
+\}
 
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
@@ -194,6 +234,10 @@ let g:go_highlight_fields = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 
+nmap <leader>rn <Plug>(coc-rename)
+
+" prettier autosave
+let g:prettier#exec_cmd_async = 1
 
 " TODO: Automatically sort quickfix instead of piping to sort for :grep
 " TODO: Figure out filesearch
