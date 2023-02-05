@@ -1,38 +1,6 @@
 #!/usr/bin/env bash
 
-###############################################################################
-# XCode Command Line Tools                                                    #
-###############################################################################
-# From: https://github.com/nicksp/dotfiles and https://github.com/alrra/dotfiles
-
-if ! xcode-select --print-path &> /dev/null; then
-
-  # Prompt user to install the XCode Command Line Tools
-  xcode-select --install &> /dev/null
-
-  # Wait until the XCode Command Line Tools are installed
-  until xcode-select --print-path &> /dev/null; do
-    sleep 5
-  done
-
-  # Point the `xcode-select` developer directory to
-  # the appropriate directory from within `Xcode.app`
-  # https://github.com/alrra/dotfiles/issues/13
-  sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-
-  # Automatically accept xcode license.
-  sudo xcodebuild -license accept &> /dev/null
-  echo 'Agreed with the XCode Command Line Tools licence'
-
-fi
-
-# Install homebrew & command line tools
-which -s brew
-if [[ $? != 0 ]] ; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-    brew update
-fi
+# Assumes you already installed Brew
 
 # Install oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -49,17 +17,3 @@ tmux source ~/.tmux.conf
 
 # Install `pure` zsh theme
 npm install --global pure-prompt
-
-# Python stuff
-pyenv install 2.7.15
-pyenv install 3.6.5
-pyenv global 2.7.15 3.6.5
-
-pip install flake8
-pip3 install flake8
-
-pyenv rehash
-
-# TODO: See if I can get a build going for this
-# TODO: Make idempotent
-# TODO: Install poetry
