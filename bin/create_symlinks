@@ -1,29 +1,16 @@
 #!/usr/bin/env bash
 
-# TODO: automatically detect dotfiles instead of hard-coding the filenames
-DOTFILES=(
-  "ctags"
-  "eslintrc.js"
-  "gitconfig"
-  "gitignore"
-  "tmux.conf"
-  "vimrc"
-  "zshrc"
-)
+# Assumes it's being called from dotfiles root.
 
-# TODO: I should be getting the dir the file is in.
-# Instead I'm getting the dir I'm running from.
-DOTFILES_DIRECTORY=$(realpath "$PWD/..")
-
-for dotfile in "${DOTFILES[@]}"
+for DOTFILE in "./rc"
 do
-  ln -sf "$DOTFILES_DIRECTORY/$dotfile" "$HOME/.$dotfile"
+  ln -sf "./rc/$DOTFILE" "$HOME/.${DOTFILE}"
 done
 
 # Config files that follow xdg directory spec
 XDG_CONFIGS="$DOTFILES_DIRECTORY/config/*"
 
-for directory in $XDG_CONFIGS
+for DIRECTORY in "./config"
 do
   filename="$(basename "$directory")"
   ln -sf "$directory" "$HOME/.config/$filename"
