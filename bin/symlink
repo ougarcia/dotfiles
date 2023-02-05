@@ -2,6 +2,10 @@
 
 # Assumes it's being called from dotfiles root.
 
+# Brewfile.
+ln -sf "./Brewfile" "$HOME/Brewfile"
+
+# Classic dotfiles
 for DOTFILE in "./rc"
 do
   ln -sf "./rc/$DOTFILE" "$HOME/.${DOTFILE}"
@@ -10,6 +14,7 @@ done
 # Config files that follow xdg directory spec
 XDG_CONFIGS="$DOTFILES_DIRECTORY/config/*"
 
+# Move configs that follow xdg directory spec
 for DIRECTORY in "./config"
 do
   filename="$(basename "$directory")"

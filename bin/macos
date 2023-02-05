@@ -1,19 +1,14 @@
 #!/usr/bin/env bash
 
-# Assumes you already installed Brew
+# Bootstraps a macos dev environment. Assumes you already installed Brew
 
-# Install oh-my-zsh
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi
+# Symlink config files.
+./bin/symlink
 
-# Install dotfiles
-~/.dotfiles/bin/create_symlinks.sh
+# Install software using Brew
+brew bundle install
 
 # Install plugins for tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
-
-# Install `pure` zsh theme
-npm install --global pure-prompt
