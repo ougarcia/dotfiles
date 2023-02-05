@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# TODO: Always run from $HOME
+# TODO: Install Brew if missing. Brew instlaller will install xcode.
+
 # Bootstraps a macos dev environment. Assumes you already installed Brew
 
 # Symlink config files.
