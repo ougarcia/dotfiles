@@ -2,21 +2,19 @@
 
 # Assumes it's being called from dotfiles root.
 
-# Brewfile.
+echo -e "Linking Brewfile"
 ln -sf "./Brewfile" "$HOME/Brewfile"
 
-# Classic dotfiles
-for DOTFILE in "./rc"
+echo -e "Linking classic dotfiles"
+for DF in $PWD/rc/*
 do
-  ln -sf "./rc/$DOTFILE" "$HOME/.${DOTFILE}"
+  ln -sf $DF $HOME/.$(basename $DF)
 done
 
-# Config files that follow xdg directory spec
-XDG_CONFIGS="$DOTFILES_DIRECTORY/config/*"
-
-# Move configs that follow xdg directory spec
-for DIRECTORY in "./config"
+echo -e "Linking xdg spec configs"
+mkdir -p $HOME/.config
+for DIR in $PWD/config/*
 do
-  filename="$(basename "$directory")"
-  ln -sf "$directory" "$HOME/.config/$filename"
+  filename="$(basename "$DIR")"
+  ln -sf $DIR $HOME/.config/$(basename $DIR)
 done
