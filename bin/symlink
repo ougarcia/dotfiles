@@ -3,6 +3,8 @@
 # TODO: run from $HOME
 # Assumes it's being called from dotfiles root.
 
+XDG_CONFIG_HOME=$HOME/.config
+
 echo -e "Linking Brewfile"
 ln -sf $PWD/Brewfile $HOME/Brewfile
 
@@ -13,9 +15,16 @@ do
 done
 
 echo -e "Linking xdg spec configs"
-mkdir -p $HOME/.config
-for DIR in $PWD/config/*
+mkdir -p $XDG_CONFIG_HOME
+for SOURCE_DIRECTORY_PATH in $PWD/config/*
 do
-  filename="$(basename "$DIR")"
-  ln -sf $DIR $HOME/.config/$(basename $DIR)
+  TARGET_DIRECTORY_PATH=$XDG_CONFIG_HOME/$(basename "$SOURCE_DIRECTORY_PATH")
+  mkdir -p $TARGET_DIRECTORY_PATH
+  for SOURCE_FILE_PATH in $SOURCE_DIRECTORY_PATH/*
+  do
+    FILE_NAME="$(basename "$SOURCE_FILE_PATH")"
+    echo -e "\n\tsource: $SOURCE_FILE_PATH"
+    echo -e "\ttarget: $TARGET_DIRECTORY_PATH/$FILE_NAME"
+    ln -sf $SOURCE_FILE_PATH $TARGET_DIRECTORY_PATH/$FILE_NAME
+  done
 done
