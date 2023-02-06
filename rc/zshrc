@@ -1,8 +1,11 @@
-## Set environment Variables
+# Set environment Variables
 export EDITOR="nvim"
 
-## Aliases
+# Aliases
 alias v='nvim'
 
-## Not version-controlled configs and aliases
+# Not version-controlled configs and aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Starship prompt
+eval "$(starship init zsh)"
