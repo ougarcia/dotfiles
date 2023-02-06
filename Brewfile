@@ -23,6 +23,7 @@ cask "kitty" # TODO: consider removing if I like wezterm
 cask "notion"
 cask "spotify"
 cask "wez/wezterm/wezterm"
+cask "zoom"
 
 # Fonts
 cask "font-caskaydia-cove-nerd-font"
