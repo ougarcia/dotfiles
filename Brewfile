@@ -1,5 +1,6 @@
 # Casks
 tap "homebrew/cask-fonts"
+tap "wez/wezterm"
 
 # Command Line
 brew "bat"
@@ -18,9 +19,10 @@ cask "dash"
 cask "flux"
 cask "google-chrome"
 cask "karabiner-elements"
-cask "kitty"
+cask "kitty" # TODO: consider removing if I like wezterm
 cask "notion"
 cask "spotify"
+cask "wez/wezterm/wezterm"
 
 # Fonts
 cask "font-caskaydia-cove-nerd-font"

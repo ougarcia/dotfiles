@@ -5,16 +5,16 @@
 
 # Bootstraps a macos dev environment. Assumes you already installed Brew
 
-# Symlink config files.
 echo -e "Running symlink script"
 ./bin/symlink
 
-# Install software using Brew
-echo -e "Installing via homebrew"
+echo -e "Running Brew Bundle"
 brew bundle install
 
-# Install plugins for tmux
-echo -e "Installing tmux plugin manager"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-tmux source ~/.tmux.conf
-~/.tmux/plugins/tpm/bin/install_plugins
+TPM_DIR=$HOME/.tmux/plugins/tpm
+if [ ! -d "$TPM_DIR" ]; then
+  echo -e "Installing tmux plugin manager"
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  tmux source ~/.tmux.conf
+  ~/.tmux/plugins/tpm/bin/install_plugins
+fi
