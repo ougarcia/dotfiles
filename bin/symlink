@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+# TODO: run from $HOME
 # Assumes it's being called from dotfiles root.
 
 echo -e "Linking Brewfile"
-ln -sf "./Brewfile" "$HOME/Brewfile"
+ln -sf $PWD/Brewfile $HOME/Brewfile
 
 echo -e "Linking classic dotfiles"
 for DF in $PWD/rc/*
