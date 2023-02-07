@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # TODO: Always run from $HOME
-# TODO: Install Brew if missing. Brew instlaller will install xcode.
+# TODO: Install Brew if missing. Brew installer will install xcode.
+# TODO: Install NVM if missing.
 
 # Bootstraps a macos dev environment. Assumes you already installed Brew
 
