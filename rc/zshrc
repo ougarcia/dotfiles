@@ -2,6 +2,7 @@
 export EDITOR="nvim"
 
 # Aliases
+alias g='git'
 alias v='nvim'
 
 # Not version-controlled configs and aliases

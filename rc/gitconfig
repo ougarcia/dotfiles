@@ -9,33 +9,20 @@
 [branch]
     autosetuprebase = always
 [rerere]
-    # keep track of rebase conflict resolutions so you're not asked again
     enabled = true
 [alias]
-    # aliases from http://haacked.com/archive/2014/07/28/github-flow-aliases/
-    # git bdone will clean up any merged branches and put you back on the develop branch
-    bclean = "!f() { git branch --merged ${1-develop} | grep -v " ${1-develop}$" | xargs git branch -d; }; f"
-    bdone = "!f() { git checkout ${1-develop} && git up && git bclean ${1-develop}; }; f"
+    c = "checkout"
+    cam = "commit -am"
 [merge]
-    # make --no-ff the default behavior
     ff = false
 [pull]
     default = current
     rebase = true
 [push]
-    # The command `git push` pushes to a remote branch of the same name as the current branch
-    #   A remote branch of the same name is created if it does not exist
     default = current
 [core]
     excludesfile = ~/.gitignore
-    #TODO: Figure out the difference
-    #excludesfile = ~/.gitignore_global
 [rebase]
     autosquash = true
 [include]
   path = ~/.gitconfiglocal
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
