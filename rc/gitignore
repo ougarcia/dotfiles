@@ -4,10 +4,9 @@
 *.db
 node_modules
 a.out
+.envrc
 
 tags
-
-.python-version
 
 config/karabiner/assets
 config/karabiner/automatic_backups
