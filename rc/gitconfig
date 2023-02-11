@@ -11,7 +11,7 @@
 [rerere]
     enabled = true
 [alias]
-    c = "checkout"
+    co = "checkout"
     cam = "commit -am"
 [merge]
     ff = false
