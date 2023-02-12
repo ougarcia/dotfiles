@@ -11,8 +11,9 @@
 [rerere]
     enabled = true
 [alias]
-    co = "checkout"
     cam = "commit -am"
+    co = "checkout"
+    s = "status"
 [merge]
     ff = false
 [pull]
@@ -26,3 +27,5 @@
     autosquash = true
 [include]
   path = ~/.gitconfiglocal
+[init]
+  defaultBranch = main
