@@ -13,6 +13,11 @@
 [alias]
     cam = "commit -am"
     co = "checkout"
+    d = "diff"
+    l = "log"
+    ll = "log --oneline"
+    ph = "push"
+    pl = "pull"
     s = "status"
 [merge]
     ff = false
