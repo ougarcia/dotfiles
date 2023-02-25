@@ -11,6 +11,9 @@
 [rerere]
     enabled = true
 [alias]
+    a = "add"
+    aa = "add -A"
+    b = "branch"
     cam = "commit -am"
     co = "checkout"
     d = "diff"
