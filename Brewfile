@@ -39,15 +39,18 @@ cask "font-jetbrains-mono-nerd-font"
 mas 'Things', id: 904280696
 
 # Dev Environments
-## python
-### Environment management
+
+# python environment management and pyenv dependencies.
 brew "pyenv"
-### pyenv dependencies
 brew "openssl"
 brew "readline"
 brew "sqlite3"
 brew "tcl-tk"
 brew "xz"
 brew "zlib"
-### packaging and dependency management
+# python packaging and dependency management
 brew "poetry"
+
+# node package management.
+brew "pnpm"
+# NOTE: We install nvm outside of brew per nvm instructions
