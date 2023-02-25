@@ -5,6 +5,7 @@
 node_modules
 a.out
 .envrc
+Brewfile.lock.json
 
 tags
 
