@@ -51,6 +51,7 @@ brew "zlib"
 # python packaging and dependency management
 brew "poetry"
 
+# node environment management.
+brew "fnm"
 # node package management.
 brew "pnpm"
-# NOTE: We install nvm outside of brew per nvm instructions
