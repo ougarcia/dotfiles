@@ -10,7 +10,6 @@ brew "direnv"
 brew "fd"
 brew "gh"
 brew "git"
-brew "lazygit"
 brew "mas"
 brew "mysql"
 brew "neovim"
@@ -19,15 +18,16 @@ brew "ripgrep"
 brew "starship"
 brew "tmux"
 brew "tree"
-brew "wiggle"
 
 # GUI
 cask "1password"
 cask "dash"
 cask "discord"
+cask "fantastical"
 cask "flux"
 cask "google-chrome"
 cask "karabiner-elements"
+cask "kindle"
 cask "notion"
 cask "orbstack"
 cask "spotify"
@@ -36,25 +36,12 @@ cask "wez/wezterm/wezterm"
 cask "zoom"
 
 # Fonts
-cask "font-caskaydia-cove-nerd-font"
-cask "font-fira-code-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 
 # Mac App Store
 mas 'Things', id: 904280696
 
 # Dev Environments
-
-# python environment management and pyenv dependencies.
-brew "pyenv"
-brew "openssl"
-brew "readline"
-brew "sqlite3"
-brew "tcl-tk"
-brew "xz"
-brew "zlib"
-# python packaging and dependency management
-brew "poetry"
 
 # node environment management.
 brew "fnm"
