@@ -14,7 +14,7 @@
     a = "add"
     aa = "add -A"
     b = "branch"
-    cam = "commit -am"
+    c = "commit"
     co = "checkout"
     d = "diff"
     l = "log"

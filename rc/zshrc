@@ -4,6 +4,7 @@ export EDITOR="nvim"
 # Aliases
 alias g='git'
 alias v='nvim'
+alias p='pnpm'
 
 # Not version-controlled configs and aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

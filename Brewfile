@@ -1,5 +1,6 @@
-# Casks
+# Taps
 tap "homebrew/cask-fonts"
+tap "planetscale/tap"
 tap "wez/wezterm"
 
 # Command Line
@@ -11,11 +12,14 @@ brew "gh"
 brew "git"
 brew "lazygit"
 brew "mas"
+brew "mysql"
 brew "neovim"
+brew "planetscale/tap/pscale"
 brew "ripgrep"
 brew "starship"
 brew "tmux"
 brew "tree"
+brew "wiggle"
 
 # GUI
 cask "1password"
