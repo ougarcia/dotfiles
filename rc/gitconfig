@@ -15,6 +15,7 @@
     aa = "add -A"
     b = "branch"
     c = "commit"
+    cleanup = "!git b --merged main | grep -v main | xargs -n 1 -r git branch -d"
     co = "checkout"
     d = "diff"
     l = "log"
