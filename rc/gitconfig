@@ -31,10 +31,12 @@
 [push]
     default = current
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = .gitignore
 [rebase]
     autosquash = true
 [include]
-  path = ~/.gitconfiglocal
+  path = .gitconfig-overrides
+[includeIf "gitdir:~/work/"]
+  path = .gitconfig-work
 [init]
   defaultBranch = main
