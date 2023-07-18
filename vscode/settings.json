@@ -1,0 +1,15 @@
+{
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "editor.fontWeight": "normal",
+  "editor.formatOnSave": true,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "workbench.startupEditor": "none"
+}
