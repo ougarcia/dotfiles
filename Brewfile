@@ -36,14 +36,14 @@ cask "wez/wezterm/wezterm"
 cask "zoom"
 
 # Fonts
-cask "font-jetbrains-mono-nerd-font"
+cask "font-jetbrains-mono"
+cask "font-symbols-only-nerd-font"
 
 # Mac App Store
 mas 'Things', id: 904280696
 
 # Dev Environments
 
-# node environment management.
-brew "fnm"
-# node package management.
-brew "pnpm"
+## node/ts/js
+brew "fnm" # environment manager
+brew "pnpm" # package manager
