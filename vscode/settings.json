@@ -22,6 +22,7 @@
   "explorer.confirmDelete": false,
   "git.autofetch": true,
   "terminal.integrated.fontFamily": "'Berkeley Mono', 'JetBrains Mono', 'Symbols Nerd Font Mono'",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "Monokai Pro Icons",
   "workbench.startupEditor": "none"

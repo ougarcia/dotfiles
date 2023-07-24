@@ -1,4 +1,5 @@
 # Taps
+tap "hashicorp/tap"
 tap "homebrew/cask-fonts"
 tap "planetscale/tap"
 tap "wez/wezterm"
@@ -13,11 +14,13 @@ brew "git"
 brew "mas"
 brew "mysql"
 brew "neovim"
-brew "planetscale/tap/pscale"
 brew "ripgrep"
 brew "starship"
 brew "tmux"
 brew "tree"
+
+brew "hashicorp/tap/terraform"
+brew "planetscale/tap/pscale"
 
 # GUI
 cask "1password"
@@ -32,8 +35,9 @@ cask "notion"
 cask "orbstack"
 cask "spotify"
 cask "visual-studio-code"
-cask "wez/wezterm/wezterm"
 cask "zoom"
+
+cask "wez/wezterm/wezterm"
 
 # Fonts
 cask "font-jetbrains-mono"
