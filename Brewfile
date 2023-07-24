@@ -1,10 +1,5 @@
-# Taps
-tap "hashicorp/tap"
-tap "homebrew/cask-fonts"
-tap "planetscale/tap"
-tap "wez/wezterm"
-
 # Command Line
+brew "awscli"
 brew "bat"
 brew "coreutils"
 brew "direnv"
@@ -19,7 +14,10 @@ brew "starship"
 brew "tmux"
 brew "tree"
 
+tap "hashicorp/tap"
 brew "hashicorp/tap/terraform"
+
+tap "planetscale/tap"
 brew "planetscale/tap/pscale"
 
 # GUI
@@ -37,9 +35,11 @@ cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
 
+tap "wez/wezterm"
 cask "wez/wezterm/wezterm"
 
 # Fonts
+tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"
 cask "font-symbols-only-nerd-font"
 
@@ -49,5 +49,5 @@ mas 'Things', id: 904280696
 # Dev Environments
 
 ## node/ts/js
-brew "fnm" # environment manager
+brew "fnm"	# environment manager
 brew "pnpm" # package manager
