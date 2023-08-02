@@ -1,11 +1,13 @@
-# Set environment Variables
+# Environment Variables
 export EDITOR="nvim"
 
 # Aliases
 alias d='docker'
 alias dc='docker-compose'
 alias g='git'
-alias p='pnpm'
+alias n='pnpm'
+alias nx='pnpm dlx'
+alias p='pulumi'
 alias v='nvim'
 
 # Not version-controlled configs and aliases

@@ -25,5 +25,8 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "Monokai Pro Icons",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "[json][jsonc][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
