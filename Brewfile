@@ -15,9 +15,6 @@ brew "starship"
 brew "tmux"
 brew "tree"
 
-tap "hashicorp/tap"
-brew "hashicorp/tap/terraform"
-
 tap "planetscale/tap"
 brew "planetscale/tap/pscale"
 
