@@ -5,9 +5,8 @@ export EDITOR="nvim"
 alias d='docker'
 alias dc='docker-compose'
 alias g='git'
-alias n='pnpm'
-alias nx='pnpm dlx'
-alias p='pulumi'
+alias p='pnpm'
+alias px='pnpm dlx'
 alias v='nvim'
 
 # Not version-controlled configs and aliases
