@@ -1,5 +1,5 @@
 return {
-  color_scheme = "Gruvbox dark, hard (base16)",
+  color_scheme = "Monokai Pro (Gogh)",
   enable_tab_bar = false,
   font_size = 13.0,
   line_height = 1.1,
