@@ -18,6 +18,7 @@
     cleanup = "!git b --merged main | grep -v main | xargs -n 1 -r git branch -d"
     co = "checkout"
     d = "diff"
+    home = "!git checkout main && git pull && git cleanup"
     l = "log"
     ll = "log --oneline"
     ph = "push"
