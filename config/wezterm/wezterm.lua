@@ -9,7 +9,7 @@ end
 config.color_scheme = 'Monokai Pro (Gogh)'
 config.enable_tab_bar = false
 config.font = wezterm.font 'Berkeley Mono'
-config.font_size = 13.0
+config.font_size = 14.0
 config.line_height = 1.2
 config.window_padding = {
   left = 0,
