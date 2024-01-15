@@ -8,6 +8,7 @@ alias g='git'
 alias p='pnpm'
 alias px='pnpm dlx'
 alias v='nvim'
+alias y='yazi'
 
 # Not version-controlled configs and aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
@@ -21,6 +22,11 @@ eval "$(fnm env --use-on-cd)"
 #direnv
 eval "$(direnv hook zsh)"
 
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+function ya() {
+	tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
