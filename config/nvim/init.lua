@@ -209,6 +209,9 @@ require('lazy').setup({
         component_separators = '|',
         section_separators = '',
       },
+      sections = {
+        lualine_c = { { 'filename', path = 1 } }
+      },
     },
   },
 
@@ -661,6 +664,12 @@ cmp.setup {
     { name = 'path' },
   },
 }
+
+-- TODO:
+--  - auto parens and quotes
+--  - rainbow parens
+--  - mini.files or vim-oil
+--  - break out into different files
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
