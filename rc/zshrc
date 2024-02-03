@@ -7,6 +7,7 @@ alias dc='docker-compose'
 alias g='git'
 alias p='pnpm'
 alias px='pnpm dlx'
+alias g="rg -Sw"
 alias v='nvim'
 alias y='yazi'
 
