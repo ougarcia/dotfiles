@@ -665,9 +665,17 @@ cmp.setup {
   },
 }
 
--- vim-oil
-require("oil").setup()
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- File explorer
+require("mini.files").setup()
+vim.keymap.set(
+  "n",
+  "-",
+  function()
+    MiniFiles.open(vim.api.nvim_buf_get_name(0))
+    MiniFiles.reveal_cwd()
+  end,
+  { desc = "Open parent directory" }
+)
 
 -- TODO:
 --  - auto parens and quotes
