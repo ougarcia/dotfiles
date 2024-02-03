@@ -269,7 +269,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -665,10 +665,13 @@ cmp.setup {
   },
 }
 
+-- vim-oil
+require("oil").setup()
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 -- TODO:
 --  - auto parens and quotes
 --  - rainbow parens
---  - mini.files or vim-oil
 --  - break out into different files
 
 -- The line beneath this is called `modeline`. See `:help modeline`
