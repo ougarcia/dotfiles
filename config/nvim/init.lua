@@ -149,7 +149,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Marker at column 80
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = '80'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -785,8 +785,6 @@ require('lazy').setup {
   --    For additional information see: :help lazy.nvim-lazy.nvim-structuring-your-plugins
   { import = 'custom.plugins' },
 }
-
--- TODO: Replace lualine with barbeque.nvim
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
