@@ -190,32 +190,6 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'loctvl842/monokai-pro.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'monokai-pro'
-    end,
-  },
-
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'auto',
-        component_separators = '|',
-        section_separators = '',
-      },
-      sections = {
-        lualine_c = { { 'filename', path = 1 } }
-      },
-    },
-  },
-
-  {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
@@ -664,18 +638,6 @@ cmp.setup {
     { name = 'path' },
   },
 }
-
--- File explorer
-require("mini.files").setup()
-vim.keymap.set(
-  "n",
-  "-",
-  function()
-    MiniFiles.open(vim.api.nvim_buf_get_name(0))
-    MiniFiles.reveal_cwd()
-  end,
-  { desc = "Open parent directory" }
-)
 
 -- TODO:
 --  - auto parens and quotes
