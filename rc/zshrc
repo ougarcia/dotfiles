@@ -23,6 +23,9 @@ eval "$(fnm env --use-on-cd)"
 #direnv
 eval "$(direnv hook zsh)"
 
+# zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
 function ya() {
 	tmp="$(mktemp -t "yazi-cwd.XXXXX")"
 	yazi "$@" --cwd-file="$tmp"
