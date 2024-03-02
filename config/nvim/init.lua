@@ -95,11 +95,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
-require('lazy').setup {
-
-  --  import from `lua/custom/plugins/*.lua`.
-  --    :help lazy.nvim-lazy.nvim-structuring-your-plugins
-  { import = 'custom.plugins' },
-}
+-- See: :help lazy.nvim-lazy.nvim-structuring-your-plugins
+require('lazy').setup 'plugins'
 
 -- vim: ts=2 sts=2 sw=2 et
