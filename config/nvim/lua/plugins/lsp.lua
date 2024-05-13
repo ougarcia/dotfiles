@@ -35,11 +35,13 @@ return {
         )
 
         -- Find references for the word under your cursor.
-        map(
-          'gr',
-          require('telescope.builtin').lsp_references,
-          '[G]oto [R]eferences'
-        )
+        map('gr', function()
+          require('telescope.builtin').lsp_references({
+            -- This option is reversed for some reason.
+            include_current_line = true,
+            show_line = false,
+          })
+        end, '[G]oto [R]eferences')
 
         -- Jump to the implementation of the word under your cursor.
         --  Useful when your language has ways of declaring types without an
