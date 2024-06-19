@@ -4,9 +4,9 @@ vim.g.maplocalleader = ' '
 
 -- [[ Setting options ]]
 
--- Make line numbers default
-vim.opt.number = true
-vim.opt.relativenumber = true
+-- Turn off numbers
+vim.opt.number = false
+vim.opt.relativenumber = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -51,8 +51,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- Marker at column 80
-vim.opt.colorcolumn = '80'
+-- Marker at column 81
+vim.opt.colorcolumn = '81'
 
 -- [[ Basic Keymaps ]]
 
