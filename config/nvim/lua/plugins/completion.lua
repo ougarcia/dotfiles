@@ -41,20 +41,33 @@ return {
       -- For an understanding of why these mappings were
       -- chosen, you will need to read `:help ins-completion`
       mapping = cmp.mapping.preset.insert({
-        -- Select the [n]ext item
-        ['<C-n>'] = cmp.mapping.select_next_item(),
+        -- Select the [n]ext item if open. If not open then do open.
+        ['<C-n>'] = cmp.mapping(function()
+          if cmp.visible() then
+            cmp.select_next_item()
+          end
+          cmp.complete({})
+        end, { 'i', 's' }),
         -- Select the [p]revious item
         ['<C-p>'] = cmp.mapping.select_prev_item(),
 
-        -- Accept ([y]es) the completion.
-        --  This will auto-import if your LSP supports it.
-        --  This will expand snippets if the LSP sent a snippet.
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+        -- Abort the completion. ctrl-e
+        ['<C-e>'] = cmp.mapping.abort(),
 
-        -- Manually trigger a completion from nvim-cmp.
-        --  Generally you don't need this, because nvim-cmp will display
-        --  completions whenever it has completion options available.
-        ['<C-Space>'] = cmp.mapping.complete({}),
+        -- Accept the completion.
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        --[[
+        Trying all three. Not sure which one I like best yet.
+        - I like <Tab> because it's rarely used otherwise. My editor does all
+          the indenting automatically. But when selecting from a list, it's
+          clumsy to go C-n/C-p to Tab because of the pinky movement
+        - I like `<C-y>` because it connects well with <C-n> and <C-p> when
+          selecting from a list. You can hold ctrl to go forwards, backwards,
+          and select.
+        - Not sure how I feel about <CR> yet.
+        --]]
 
         -- Think of <c-l> as moving to the right of your snippet expansion.
         --  So if you have a snippet that's like:
