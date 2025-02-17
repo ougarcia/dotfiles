@@ -135,6 +135,7 @@ return {
     --        https://luals.github.io/wiki/settings/
     -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
     local servers = {
+      pylsp = {},
       tsserver = {},
       lua_ls = {
         settings = {
@@ -179,6 +180,8 @@ return {
     })
 
     require('mason-lspconfig').setup({
+      ensure_installed = {},
+      automatic_installation = false,
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
