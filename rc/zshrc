@@ -79,6 +79,12 @@ if [[ -f "~/.orbstack/shell/init.zsh" ]] then
   source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 fi
 
+# aws cli completions
+if command -v aws_completer &> /dev/null; then
+  autoload -Uz bashcompinit && bashcompinit
+  complete -C aws_completer aws
+fi
+
 # Environment Variables
 export EDITOR="nvim"
 
