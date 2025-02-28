@@ -21,8 +21,10 @@
     home = "!git checkout main && git pull && git cleanup"
     l = "log"
     ll = "log --oneline"
+    mb = "merge-base main HEAD"
     ph = "push"
     pl = "pull"
+    ri = "rebase -i"
     s = "status"
 [merge]
     ff = false
