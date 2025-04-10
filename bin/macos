@@ -1,16 +1,37 @@
 #!/usr/bin/env bash
 
-# TODO: Always run from $HOME
-# TODO: Install Brew if missing. Brew installer will install xcode.
-# TODO: Install NVM if missing.
+URL="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+/bin/bash -c "$(curl -fsSL $URL)"
 
-# Bootstraps a macos dev environment. Assumes you already installed Brew
+XDG_CONFIG_HOME=$HOME/.config
 
-echo -e "Running symlink script"
-./bin/symlink
+echo -e "Linking Brewfile"
+ln -sf $PWD/Brewfile $HOME/Brewfile
+
+echo -e "Linking classic dotfiles"
+for DF in $PWD/rc/*
+do
+  ln -sf $DF $HOME/.$(basename $DF)
+done
+
+echo -e "Linking xdg spec configs"
+for DIR in $PWD/config/*
+do
+  ln -sfn $DIR $TARGET $XDG_CONFIG_HOME/$(basename $DIR)
+done
 
 echo -e "Running Brew Bundle"
 brew bundle install
+
+TPM_DIR="$HOME/.tmux/plugins/tpm"
+mkdir -p "$(dirname "$TPM_DIR")"
+if [ -d "$TPM_DIR/.git" ]; then
+  $(cd "$TPM_DIR" && git pull origin master)
+else
+  git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
+fi
+tmux source ~/.tmux.conf
+"$TPM_DIR/bin/install_plugins"
 
 TPM_DIR=$HOME/.tmux/plugins/tpm
 if [ ! -d "$TPM_DIR" ]; then

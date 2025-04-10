@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd $HOME
+
+git clone git@github.com:ougarcia/dotfiles.git
+
+cd dotfiles
+
+./bin/macos
