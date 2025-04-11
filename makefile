@@ -1,24 +1,15 @@
-.PHONY: all tpm stow bundle brew
+.PHONY: brew bundle stow init
 
-TPM_DIR := $(HOME)/.tmux/plugins/tpm
-
-all: tpm
+init: brew bundle stow
 	@echo "✅ Environment setup complete"
 
-$(TPM_DIR)/.git:
-	@mkdir -p $(dir $(TPM_DIR))
-	git clone https://github.com/tmux-plugins/tpm $(TPM_DIR)
-
-tpm: link $(TPM_DIR)/.git
-	@$(TPM_DIR)/bin/install_plugins
-
-link: bundle
+stow:
 	stow --dotfiles home
 
-bundle: brew
+bundle:
 	brew bundle install
+
+brew: | /opt/homebrew/bin/brew
 
 /opt/homebrew/bin/brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-brew: /opt/homebrew/bin/brew
