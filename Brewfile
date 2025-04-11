@@ -33,3 +33,6 @@ cask "font-symbols-only-nerd-font"
 ## node/ts/js
 brew "fnm" # environment manager
 brew "pnpm" # package manager
+
+# python
+brew "uv"
