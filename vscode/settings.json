@@ -1,9 +1,0 @@
-{
-  "editor.fontFamily": "'Berkeley Mono', 'JetBrains Mono', 'Symbols Nerd Font Mono'",
-  "editor.fontLigatures": true,
-  "editor.rulers": [80],
-  "editor.tabSize": 2,
-  "terminal.integrated.fontFamily": "'Berkeley Mono', 'JetBrains Mono', 'Symbols Nerd Font Mono'",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.settings.editor": "json",
-}
