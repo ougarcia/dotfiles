@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 cd $HOME
-git clone git@github.com:ougarcia/dotfiles.git
+if [ ! -d "dotfiles/.git" ]; then
+    git clone git@github.com:ougarcia/dotfiles.git
+fi
 cd dotfiles
+git fetch && git pull
 make
