@@ -87,13 +87,13 @@ fi
 
 # Environment Variables
 export EDITOR="nvim"
+export RIPGREP_CONFIG_PATH="~/.config/ripgrep/config"
 
 # Aliases
 alias d='docker'
 alias g='git'
 alias ls='ls --color'
 alias p='pnpm'
-alias r="rg -S" # smartcase as default. We don't care about `r` builtin.
 alias v='nvim'
 
 # Not version-controlled configs and aliases
