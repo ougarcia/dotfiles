@@ -1,4 +1,5 @@
 # Command Line
+brew "awscli"
 brew "bat"
 brew "coreutils"
 brew "direnv"
