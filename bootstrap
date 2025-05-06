@@ -12,7 +12,9 @@ if [ ! -d "dotfiles/.git" ]; then
     git clone https://github.com/ougarcia/dotfiles.git
 fi
 
-make -C dotfiles
+cd dotfiles
+
+make
 
 # Set origin to ssh
 git remote set-url origin git@github.com:ougarcia/dotfiles.git
