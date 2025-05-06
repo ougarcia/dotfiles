@@ -13,3 +13,6 @@ if [ ! -d "dotfiles/.git" ]; then
 fi
 
 make -C dotfiles
+
+# Set origin to ssh
+git remote set-url origin git@github.com:ougarcia/dotfiles.git
