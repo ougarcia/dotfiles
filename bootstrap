@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
 cd $HOME
+
+# Installing homebrew will also install xcode cli tools
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Add homebrew to path. Once we symlink our dotfiles this will live in our zshrc
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 if [ ! -d "dotfiles/.git" ]; then
-    git clone git@github.com:ougarcia/dotfiles.git
+    git clone https://github.com/ougarcia/dotfiles.git
 fi
-cd dotfiles
-git fetch && git pull
-make
+
+make -C dotfiles
