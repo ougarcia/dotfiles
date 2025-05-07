@@ -87,7 +87,7 @@ fi
 
 # Environment Variables
 export EDITOR="nvim"
-export RIPGREP_CONFIG_PATH="~/.config/ripgrep/config"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 
 # Aliases
 alias d='docker'
