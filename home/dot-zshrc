@@ -93,6 +93,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 alias d='docker'
 alias g='git'
 alias ls='ls --color'
+alias m='make'
 alias p='pnpm'
 alias v='nvim'
 
