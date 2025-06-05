@@ -33,8 +33,6 @@
     rebase = true
 [push]
     default = current
-[core]
-    excludesfile = .gitignore
 [rebase]
     autosquash = true
 [include]

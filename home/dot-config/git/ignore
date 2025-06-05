@@ -11,3 +11,5 @@ tags
 
 config/karabiner/assets
 config/karabiner/automatic_backups
+
+**/.claude/settings.local.json
