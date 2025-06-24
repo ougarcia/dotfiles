@@ -1,0 +1,13 @@
+# Get rid of the "Are you sure?" alert when closing a window or tab.
+confirm-close-surface = false
+
+cursor-style = block
+
+font-family = "Berkeley Mono"
+
+# enable ligatures
+font-feature = calt
+
+font-size = 15
+
+theme = Monokai Pro
