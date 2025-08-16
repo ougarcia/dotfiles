@@ -13,3 +13,10 @@ config/karabiner/assets
 config/karabiner/automatic_backups
 
 **/.claude/settings.local.json
+
+.local.*
+
+CLAUDE.md
+
+home/dot-config/claude
+home/dot-config/zed
