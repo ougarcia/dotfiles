@@ -26,6 +26,7 @@
     pl = "pull"
     ri = "rebase -i"
     s = "status"
+    wt = "worktree"
 [merge]
     ff = false
 [pull]
