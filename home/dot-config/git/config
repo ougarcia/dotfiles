@@ -21,6 +21,8 @@
     home = "!git checkout main && git pull && git cleanup"
     l = "log"
     ll = "log --oneline"
+    ladog = "log --all --decorate --oneline --graph"
+    lbdog = "log --branches --decorate --oneline --graph"
     mb = "merge-base main HEAD"
     ph = "push"
     pl = "pull"
@@ -42,3 +44,5 @@
   path = .gitconfig-work
 [init]
   defaultBranch = main
+
+# vim: ft=gitconfig
