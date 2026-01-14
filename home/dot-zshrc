@@ -74,7 +74,7 @@ fi
 
 # zoxide
 if command -v zoxide >/dev/null 2>&1; then
-  eval "$(zoxide init --cmd cd zsh)"
+  eval "$(zoxide init --cmd c zsh)"
 fi
 
 # fzf
@@ -120,3 +120,7 @@ esac
 # pnpm end
 #
 export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+export PATH="$PATH:$HOME/go/bin"
+
