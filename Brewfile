@@ -11,6 +11,7 @@ brew "ripgrep"
 brew "stow"
 brew "tmux"
 brew "tree"
+brew "worktrunk"
 brew "xh"
 brew "zinit"
 

@@ -118,9 +118,12 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-#
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 export PATH="$PATH:$HOME/go/bin"
 
+if command -v wt >/dev/null 2>&1;
+  then eval "$(command wt config shell init zsh)"
+fi
