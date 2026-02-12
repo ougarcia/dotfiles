@@ -11,7 +11,6 @@ brew "stow"
 brew "tmux"
 brew "tree"
 brew "zinit"
-brew "zoxide"
 
 # GUI
 cask "1password"
@@ -24,9 +23,6 @@ cask "obsidian"
 cask "orbstack"
 cask "slack"
 cask "twingate"
-
-tap "wez/wezterm"
-cask "wez/wezterm/wezterm"
 
 # Fonts
 cask "font-jetbrains-mono"
