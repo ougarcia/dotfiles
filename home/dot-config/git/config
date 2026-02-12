@@ -28,7 +28,25 @@
     pl = "pull"
     ri = "rebase -i"
     s = "status"
-    wt = "worktree"
+    wt = "!f() { \
+        NAME=$1; \
+        REPO=$(basename $(git rev-parse --show-toplevel)); \
+        BRANCH=oz-${NAME}; \
+        WORKTREE_PATH=../${REPO}-${NAME}; \
+        SESSION_NAME=${REPO}-${NAME}; \
+        if git rev-parse --verify ${BRANCH} >/dev/null 2>&1; then \
+            git worktree add ${WORKTREE_PATH} ${BRANCH}; \
+        else \
+            git worktree add -b ${BRANCH} ${WORKTREE_PATH}; \
+        fi; \
+        [ -f .env ] && cp -c .env ${WORKTREE_PATH}/.env; \
+        [ -f .env.local ] && cp -c .env.local ${WORKTREE_PATH}/.env.local; \
+        [ -f local.mk ] && cp -c local.mk ${WORKTREE_PATH}/local.mk; \
+        if ! tmux has-session -t ${SESSION_NAME} 2>/dev/null; then \
+            tmux new-session -d -s ${SESSION_NAME} -c ${WORKTREE_PATH}; \
+        fi; \
+        tmux switch-client -t ${SESSION_NAME} || tmux attach -t ${SESSION_NAME}; \
+    }; f"
 [merge]
     ff = false
 [pull]
