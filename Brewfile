@@ -5,12 +5,16 @@ brew "coreutils"
 brew "direnv"
 brew "fd"
 brew "fzf"
+brew "gh"
 brew "neovim"
 brew "ripgrep"
 brew "stow"
 brew "tmux"
 brew "tree"
+brew "xh"
 brew "zinit"
+
+brew "anomalyco/tap/opencode"
 
 # GUI
 cask "1password"
